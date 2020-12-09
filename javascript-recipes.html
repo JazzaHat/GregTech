@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - javascript-recipes</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+Please remember to enable Javascript to see recipes.<br />
+<script type="text/javascript">
+//<![CDATA[
+
+var iCrafting = 0;
+var iSmelting = 0;
+
+var asCRAFT_COORDS = new Array('34,34,66,66', '70,34,102,66', '106,34,138,66','34,70,66,102', '70,70,102,102', '106,70,138,102', '34,106,66,138', '70,106,102,138', '106,106,138,138','222,70,254,102');
+var asSMELT_COORDS = new Array('106,50,138,82', '214,50,246,82')
+
+// Creates an interactive crafting recipe picture
+function crafting(pBaseImage, asTableText, apPageUrl){
+
+    document.write('<img src='+pBaseImage+' height="172" width="296" usemap="crafting_"'+iCrafting+' />');
+    document.write('<map name="crafting_"'+iCrafting+'>');
+
+    for (var craftSlot=0; craftSlot<10; craftSlot++) {
+        if(asTableText[craftSlot] != null && apPageUrl[craftSlot] != null){
+        document.write('<area coords='+asCRAFT_COORDS[craftSlot]+' href='+apPageUrl[craftSlot]+' alt='+asTableText[craftSlot]+' title='+asTableText[craftSlot]+' />')
+        }
+    }
+
+    document.write('<\/map>');
+    iCrafting++;
+}
+
+function smelting(pBaseImage, asTableText, apPageUrl){
+
+    document.write('<img src='+pBaseImage+' height="172" width="296" usemap="smelting_"'+iSmelting+' />');
+    document.write('<map name="crafting"'+iSmelting+'>');
+
+    document.write('<area coords='+asSMELT_COORDS[0]+' href='+apPageUrl[0]+' alt='+asTableText[0]+' title='+asTableText[0]+' />');
+    document.write('<area coords='+asSMELT_COORDS[1]+' href='+apPageUrl[1]+' alt='+asTableText[1]+' title='+asTableText[1]+' />');
+
+    document.write('<\/map>');
+    iSmelting++;
+}
+
+//]]>
+</script><br />
+NOTE: Development version, please do not use yet.
+    </div>
+  </body>
+</html>

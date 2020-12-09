@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - MetaTileEntities</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+In Minecraft, everything is either a Block, an Item, or an Entity. Blocks are static and remain in the world, and do nothing unless updated to do something. This is dirt, stone, etc. Items are carried by Entities, and can be used by some Entities. These are tools and such. Entities are anything that can perform actions. Some can move, some can carry items, some can act upon other Entities. These are things like Player (Steve?), hostile monsters, minecarts, and dropped items. Then there is a fourth type of thing, a TileEntity. TileEntities are blocks that can have some properties of entities. They cannot move, but they can store items and perform actions either on them or on other Entities or TileEntities (TEs). Additionally, unlike regular Blocks which only update when told, TileEntities are updated in every server tick. In vanilla Minecraft, these are things like chests, furnaces, and hoppers.<br />
+All machines and machinery-related blocks added by mods are also TileEntities. This is how the massive factories of Buildcraft, IndustrialCraft<span style="font-size: 90%; vertical-align: super;">2</span>, and Redpower 2 of years past could be continuously operated with no player intervention. However, as each TE is an Entity, and must have its actions processed every tick, large numbers of TEs start to generate server lag.<br />
+<br />
+GregTech does things slightly differently than other mods. All (currently working) machinery and automation blocks added by GregTech are MetaTileEntities (MTEs). MTEs function similarly to TileEntities, but MTEs were designed to have a certain set of properties that were universal across all MTEs, allowing for reduced processing time per tick, a consistent way to modify or upgrade them, and an easy way to add new machines. It is also why all GT machines occupy a single Block ID (default 4059).<br />
+(This is also why the &quot;You have encountered a serious bug, if you have legitly acquired this block. Please report this to GregTech Intergalactical immidiately&quot; block exists. It is the basic form of the MTE block, when no Metadata is given to it.)<br />
+Note: the Superconductor Wire and GregTech Computer Cube are not MTEs, which contributes to why they currently don't work.<br />
+<br />
+<h2 id="toc0"><a name="x-List of all (currently known) universal properties of GregTech MetaTileEntities"></a>List of all (currently known) universal properties of GregTech MetaTileEntities</h2>
+ <ul><li><span style="line-height: 1.5;">Certain timers, activating every <em>n</em>th Tick, are run a single time across all MTEs, and only checked by those that need them</span></li><li>All MTEs can accept <a class="wiki_link" href="Covers.html">Covers</a>, both functional and decorational</li><li>All EU consuming MTEs can accept Transformer, Battery, Steam, and MJ Upgrades<ul><li>This includes Buffers, Machine Boxes, and other transport blocks, as they consume small amounts of EU to transport items, but not <a class="wiki_link" href="Pipes.html">Pipes</a></li><li>This also means that, with Battery and Transformer upgrades, any EU-consuming MTE can be an &quot;EU Storage Block&quot;</li><li>Only Machines that actively process things can accept Overclocker Upgrades</li></ul></li><li>All MTEs that have inventories can transfer their contents via Conveyor Modules</li><li>All MTEs that have fluid tanks can transfer their contents via Pump Modules</li><li>Almost all MTEs capable of storing EU will store 10,000 EU by default.<ul><li>Generators are technically capable of storing 1 million EU, however they will not burn more fuel if they contain more than 10,000EU</li></ul></li></ul>
+    </div>
+  </body>
+</html>

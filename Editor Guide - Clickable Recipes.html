@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Editor Guide - Clickable Recipes</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="Crafting Recipes"></a>Crafting Recipes</h1>
+ <ol><li>Create the base recipe image file first. Photoshop (or use any other free image editor, such as GIMP) the item images onto a crafting grid template.<ol><li>Templates<ol><li><a href="files/shaped_crafting.png">Shaped Crafting </a></li><li><a href="files/shapeless_crafting.png">Shapeless Crafting</a></li></ol></li><li>You can obtain images of GregTech items from gregtechmod.zip/assets/gregtechmod. However, they are 16x16, so you should enlarge them to 32x32 first with no interpolation.<ol><li>Refer to config/GregTech.lang for the items labeled with numerals</li></ol></li><li>You can obtain items of other things by hitting F2 ingame. However, they are 48x48, so you should resize them to 32x32 with no interpolation.</li><li>The convention is to name it item_name_recipe.png<br />
+<strong>Example:</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">digital_chest_recipe1.png</pre>
+
+</li><li>If the recipe yields multiple items (e.g. Data Orbs), please use &quot;Minecraftia&quot; font and it should be in the bottom-right corner, moved to the centre by 2x2 pixels.</li></ol></li><li>Upload your base recipe image file to the Wikispace</li><li>Afterwards, create a notepad file (you don't need to save it yet) with the following HTML code<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="kw3">usemap</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>&gt;</span></pre>
+
+<ol><li>[1] is the link to the recipe image file. Find it using the Pages and File search function, click on the link beside the filename. Afterwards, copy the link address, but omit the &quot;gregtechcommunitywiki.wikispaces.com&quot; portion. Enclose it in quotation marks.<br />
+<strong>Example:</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&quot;file/view/new-AESU-crafting.png/466544084/new-AESU-crafting.png&quot;</pre>
+
+</li><li>[2] is a string of words you create. The wiki convention is to name it &quot;item_name_recipe&quot;.<br />
+<strong>Example:</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&quot;digital_chest_recipe1&quot;</pre>
+
+</li><li>
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&quot;aesu_recipe_new&quot;</pre>
+
+</li></ol></li><li>Add the following code:<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">map</span> <span class="kw3">name</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>&gt;</span></pre>
+
+</li></ol>[2] should be the name you chose previously.<br />
+<ul class="quotelist"><li><br />
+</li></ul><ol><li>Add the following line of code <strong>for every input and output slot used</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="br0">&#91;</span><span class="nu0">5</span><span class="br0">&#93;</span>&gt;</span></pre>
+
+<ol><li>[3] depends on the location of the item. See the appendix.</li><li>[4] is the URL you want to connect to, enclosed in quotation marks. Omit this portion if there is no wiki page for the item yet.</li><li>[5] is the name of the item. Enclose it in quotation marks.</li><li><strong>Example:</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,106,66,138&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,34,102,66&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;GregTech+ComputerCube&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;GregTech ComputerCube&quot;</span>&gt;</span></pre>
+
+</li></ol></li><li>Finally, end the code with<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">map</span>&gt;</span></pre>
+
+</li><li>Create a widget in the space you want to add the recipe. Select the type &quot;Other&quot; or &quot;Other HTML&quot;.</li><li>Copy and paste your code into the space provided. Hit preview to check that it is what you want.<br />
+<strong>Example:</strong><br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;file/view/new-AESU-crafting.png/466544084/new-AESU-crafting.png&quot;</span> <span class="kw3">usemap</span><span class="sy0">=</span><span class="st0">&quot;aesu_recipe_new&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">map</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;aesu_recipe_new&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,34,66,66&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,70,66,102&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,106,66,138&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,34,102,66&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;GregTech+ComputerCube&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;GregTech ComputerCube&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,70,102,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Lapotronic+Energy+Orb&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Lapotronic Energy Orb&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,106,102,138&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Highly Advanced Machine Block&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,34,138,70&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,70,138,102&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,106,138,138&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Energy Flow Circuit&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">shape</span><span class="sy0">=</span><span class="st0">&quot;rect&quot;</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;222,70,254,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;AESU&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;AESU&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">map</span>&gt;</span></pre>
+
+</li><li>When you have corrected all errors, click &quot;Submit&quot;.</li><li>Hit &quot;Save&quot; in the editor.<br />
+<strong>Example:</strong><br />
+<img src="file/view/new-AESU-crafting.png/466544084/new-AESU-crafting.png" usemap="aesu_recipe_new" /> <map name="aesu_recipe_new" id="aesu_recipe_new">
+<area shape="rect" coords="34,34,66,66" title="Energy Flow Circuit" />
+<area shape="rect" coords="34,70,66,102" title="Energy Flow Circuit" />
+<area shape="rect" coords="34,106,66,138" title="Energy Flow Circuit" />
+<area shape="rect" coords="70,34,102,66" href="GregTech+ComputerCube" title="GregTech ComputerCube" />
+<area shape="rect" coords="70,70,102,102" href="Lapotronic+Energy+Orb" title="Lapotronic Energy Orb" />
+<area shape="rect" coords="70,106,102,138" title="Highly Advanced Machine Block" />
+<area shape="rect" coords="106,34,138,70" title="Energy Flow Circuit" />
+<area shape="rect" coords="106,70,138,102" title="Energy Flow Circuit" />
+<area shape="rect" coords="106,106,138,138" title="Energy Flow Circuit" />
+<area shape="rect" coords="222,70,254,102" href="AESU" title="AESU" /></map></li></ol><br />
+<h1 id="toc1"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes"></a>Furnace, Maceration, Compression, Plate Bending, etc. Recipes</h1>
+ [Work-in-progress]<br />
+<br />
+<h3 id="toc2"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Furnace Smelting"></a>Furnace Smelting</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <td>70,34,102,66<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td>^ ^ ^<br />
+</td>
+        <td>-&gt;<br />
+</td>
+        <td>190,70,222,102<br />
+</td>
+    </tr>
+    <tr>
+        <td>70,106,102,138<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+</table>
+
+<h3 id="toc3"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Macerating, Extracting, Compressing, Wiremill(ing), Plate Bending, Canning"></a>Macerating, Extracting, Compressing, Wiremill(ing), Plate Bending, Canning</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <td>78,36,110,68<br />
+</td>
+        <td>-&gt;<br />
+</td>
+        <td>186,36,218,68<br />
+</td>
+    </tr>
+</table>
+
+<h3 id="toc4"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:"></a>Templates:</h3>
+ <ul><li><h4 id="toc5"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Macerating: Blank_Macerator.png"></a>Macerating: <a href="files/Blank_Macerator.png">Blank_Macerator.png</a></h4>
+</li><li><h4 id="toc6"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Extracting: Blank_Extractor.png"></a>Extracting: <a href="files/Blank_Extractor.png">Blank_Extractor.png</a></h4>
+</li><li><h4 id="toc7"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Compressing: Blank_Compressor.png"></a>Compressing: <a href="files/Blank_Compressor.png">Blank_Compressor.png</a></h4>
+</li><li><h4 id="toc8"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Wiremill: Blank_Wiremill.png"></a>Wiremill: <a href="files/Blank_Wiremill.png">Blank_Wiremill.png</a></h4>
+</li><li><h4 id="toc9"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Bending: Blank_Bending.png"></a>Bending: <a href="files/Blank_Bending.png">Blank_Bending.png</a></h4>
+</li><li><h4 id="toc10"><a name="Furnace, Maceration, Compression, Plate Bending, etc. Recipes--Templates:-Canning (Incomplete): Blank_Canning.png"></a>Canning (Incomplete): <a href="files/Blank_Canning.png">Blank_Canning.png</a></h4>
+</li></ul><h3 id="toc11"> </h3>
+ <h1 id="toc12"><a name="Appendix"></a>Appendix</h1>
+ <h2 id="toc13"><a name="Appendix-URL Tips"></a>URL Tips</h2>
+ <ul><li>If you are trying to link to a page in GTCW, you can omit<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">gregtechcommunitywiki.wikispaces.com/</pre>
+
+</li></ul><h2 id="toc14"><a name="Appendix-Value of Coords"></a>Value of Coords</h2>
+ <h3 id="toc15"><a name="Appendix-Value of Coords-Crafting Recipe"></a>Crafting Recipe</h3>
+ <ul><li>Vertical<ul><li><strong>Top row:</strong> XX, 34, XX, 66</li><li><strong>Middle row:</strong> XX, 70, XX, 102</li><li><strong>Bottom row:</strong> XX, 106, XX, 138</li></ul></li><li>Horizontal<ul><li><strong>Left column:</strong> 34, XX, 66, XX</li><li><strong>Middle column:</strong> 70, XX, 102, XX</li><li><strong>Right column:</strong> 106, XX, 138, XX</li></ul></li><li>Output<ul><li>222,70,254,102</li></ul></li><li>Remember to enclose your value in quotation marks.</li></ul>
+    </div>
+  </body>
+</html>

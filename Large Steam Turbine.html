@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Large Steam Turbine</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+The <strong>Large Steam Turbine</strong> is a Multiblock Generator that generates energy (as EU) from Steam.<br />
+<br />
+The Large Steam Turbine uses 1600 litres of steam per tick. They were designed to be used in conjunction with GregTech <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boilers</a> (or RailCraft Boilers). <span style="line-height: 1.5;">One <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boiler</a> produces 800 litres of Steam per tick, so two is exactly enough to power one Turbine. (For comparison: A Railcraft 36HP Steam Boiler will produce 720 litres of Steam per tick.) The standard GregTech Steam:EU ratio of 2:1 applies, so at 100% efficiency, a Large Steam Turbine will produce 800EU/t.</span><br />
+<br />
+<span style="line-height: 1.5;">Because this keeps getting asked, there are currently five known ways to transport sufficient Steam from Boilers into the Large Steam Turbine:</span><br />
+<ol><li>GregTech <a class="wiki_link" href="Covers.html">Pump Module</a> covers can transport 1000 litres of liquid per tick. Place a Pump Module on the Output Hatch of the <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boiler</a>, place a Machine Box in between the Boiler and the Turbine, place a Pump Module on the Machine Box, and run a cable to power the Machine Box.<ul><li>Alternatively, you can attach a Pump Module to the Output Hatch of a <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boiler</a>, and place that directly adjacent <span style="line-height: 1.5;">to the Input Hatch on the Turbine. This is probably the better way to do it.</span></li></ul></li><li>On 1.6.2, GregTech <a class="wiki_link" href="Pipes.html">Large Tungstensteel Pipes</a> can transport 960 litres of fluid per tick. You need to use an import pump cover on pipes if you are extracting from RailCraft boilers.</li><li><span style="line-height: 1.5;">Multiple Liquiducts, connected to Transvector Interfaces (from Thaumic Tinkerer). This is the only transport solution that may not require two Input Hatches.</span></li><li><span style="line-height: 1.5;">Tesseracts (GregTech or Thermal Expansion, Thermal expansion preferably) directly adjacent to the Output of the <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boiler</a> and the Input of the Steam Turbine. This is probably the most flexible solution, as you can place the Boilers and the Turbine wherever you want them, in stead of being forced to keep them together.</span></li><li><span style="line-height: 1.5;">Applied Energistics rv14 adds the P2P Tunnel, a block that allows you to transport Items, Liquids/Fluids, or Energy via an ME Network. They have been tested at up to 1000 litres of liquid per tick, but unfortunately as there is no way to combine two Tunnel inputs to feed a single Tunnel output, two input hatches are still required.</span></li></ol><br />
+The Large Steam Turbine is constructed as a hollow, 4-long 3-high 3-wide box, out of Standard Machine Casings. The center of the front (3x3) side contains the Large Steam Turbine control block. The blocks in front of the front side must be empty air. The center of the back (3x3) side contains a Dynamo Hatch, to which a cable can be attached.<br />
+<strong>Warning:</strong> Due to the base output rate of 800EU/t, an insulated HV Cable or Transformer-upgraded Machine Box is recommended; unless you are running 1.6.2 IC2 Experimental, Glass Fiber cables will not be sufficient.<br />
+The center two blocks of each 4x3 side can be filled with either Machine Casings, Input Hatches, Output Hatches, or the one <span style="line-height: 1.5;"><a class="wiki_link" href="Maintenance%20Hatch.html">Maintenance Hatch</a></span> required by all new Multiblock Machines.<br />
+<strong>Note:</strong> Because of the Turbine's rate of steam consumption, two Input Hatches are required to feed it.<br />
+When operating, the Large Steam Turbine will attempt to output 10 litres of Water per tick from its Output Hatches, which you can feed back to your Boilers to attempt to create a closed system (in which little to no additional Water supply is required).<br />
+<br />
+In order to activate a Large Steam Turbine, you need to insert a Turbine Rotor (see below), make sure that all problems have been fixed via the <span style="line-height: 1.5;"><a class="wiki_link" href="Maintenance%20Hatch.html">Maintenance Hatch</a>, make sure you have a sufficient steam supply, and then whack the Large Steam Turbine block with a Rubber Hammer. The Large Steam Turbine will operate on less than 1600 litres of Steam per tick, but it will do so at dramatically reduced efficiency and stutter on and off.</span><br />
+<br />
+The Large Steam Turbine control block requires a Turbine Rotor in order to function. The Rotor used determines the base efficiency at which the Turbine operates. There are 5 different Rotor materials, each with its own efficiency and lifespan.<br />
+
+
+<table class="wiki_table">
+    <tr>
+        <td><strong>Material</strong><br />
+</td>
+        <td style="text-align: center;"><strong>Efficiency</strong><br />
+</td>
+        <td style="text-align: center;"><strong>Durability</strong><br />
+</td>
+        <td style="text-align: center;"><strong>Approximate Lifespan</strong><br />
+</td>
+        <td style="text-align: center;"><strong>EU Output</strong><br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Bronze</strong><br />
+</td>
+        <td style="text-align: center;">60%<br />
+</td>
+        <td style="text-align: center;">15 000<br />
+</td>
+        <td style="text-align: center;">8 Days<br />
+</td>
+        <td style="text-align: center;">480 EU/t<br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Steel</strong><br />
+</td>
+        <td style="text-align: center;">80%<br />
+</td>
+        <td style="text-align: center;">10 000<br />
+</td>
+        <td style="text-align: center;">5 Days<br />
+</td>
+        <td style="text-align: center;">640 EU/t<br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Magnalium</strong><br />
+</td>
+        <td style="text-align: center;">100%<br />
+</td>
+        <td style="text-align: center;">10 000<br />
+</td>
+        <td style="text-align: center;">5 Days<br />
+</td>
+        <td style="text-align: center;">800 EU/t<br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Tungstensteel</strong><br />
+</td>
+        <td style="text-align: center;">90%<br />
+</td>
+        <td style="text-align: center;">30 000<br />
+</td>
+        <td style="text-align: center;">16 Days<br />
+</td>
+        <td style="text-align: center;">720 EU/t<br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Carbon</strong><br />
+</td>
+        <td style="text-align: center;">125%<br />
+</td>
+        <td style="text-align: center;">2 500<br />
+</td>
+        <td style="text-align: center;">1 Day, 3 Hours<br />
+</td>
+        <td style="text-align: center;">1000 EU/t<br />
+</td>
+    </tr>
+</table>
+
+100 points of turbine durability translates to approximately 75-80 minutes real-time.<br />
+Damaged Turbine Rotors can be fully repaired by crafting them with a Wrench, a Hammer, and a File. <strong>However,</strong> Carbon Turbine Rotors cannot be repaired.<br />
+Railcraft Turbine Rotors can be used as well. They run at 80% Efficiency, however they take 2 damage when a GT rotor would take 1 damage, so their effective durability is 15,000 (8 days). They are repaired in the Railcraft way, consuming Steel.<br />
+<strong>Note:</strong> The Large Steam Turbine block cannot be interacted with by any blocks or entities other than players themselves. This means that automating Turbine Rotor repairs/replacements is not currently possible.<br />
+<strong>Warning:</strong> If the Turbine Rotor breaks while the Turbine is active, the Turbine will explode.<br />
+<br />
+<br />
+A model Steam Turbine set-up:<br />
+<img src="/mainSpace/files/2013-10-15_02.26.14.png" alt="2013-10-15_02.26.14.png" title="2013-10-15_02.26.14.png" style="height: 419px; width: 800px;" /><br />
+The Turbine itself is the large light-gray box in the middle-left. On either side of it are <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boilers</a>, each fed by a small infinite water supply and a Drain Module. The AE ME Network behind it is providing the Lava consumed by the <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boilers</a>. This example uses ME P2P Tunnels to supply lava, but uses Pump Modules to transport Steam. <span style="line-height: 1.5;">Each <a class="wiki_link" href="Thermal%20Boiler.html">Thermal Boiler</a> has an Output Hatch, with a Pump Module attached, placed on the side facing the Turbine. The Turbine has a pair of Input Hatches matching up with them.</span>
+    </div>
+  </body>
+</html>

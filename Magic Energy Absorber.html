@@ -1,0 +1,192 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Magic Energy Absorber</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<em>&quot;Absorbs Magic Energy and disenchants Items&quot;</em><br />
+The <strong>Magic Energy Absorber</strong> generates EU by absorbing magical energy from magical entities or item enchantments.<br />
+<div id="toc"><h1 class="nopad">Table of Contents</h1><div style="margin-left: 3em;"><a href="#x--Recipe">Recipe</a></div>
+<div style="margin-left: 3em;"><a href="#x--Fuel Types">Fuel Types</a></div>
+<div style="margin-left: 3em;"><a href="#x--Item Enchantments">Item Enchantments</a></div>
+<div style="margin-left: 3em;"><a href="#x--Usage Tips">Usage Tips</a></div>
+</div>
+<ul><li>Outputs energy at 128 EU/t (<strong>MV</strong>)</li><li>Accepts <a class="wiki_link" href="Covers.html">Covers</a>.</li></ul><br />
+<br />
+<h3 id="toc0"><a name="x--Recipe"></a>Recipe</h3>
+ 4x Energy Flow Circuits<br />
+1x Superconductor<br />
+2x Iridium Plates<br />
+1x Beacon<br />
+1x <a class="wiki_link" href="Magic%20Energy%20Converter.html">Magic Energy Converter</a><br />
+<img src="/mainSpace/files/Magic%20Energy%20Absorber%20Recipe.png" alt="Magic Energy Absorber Recipe.png" title="Magic Energy Absorber Recipe.png" /><br />
+<br />
+<h3 id="toc1"><a name="x--Fuel Types"></a>Fuel Types</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <th>Fuel Type<br />
+</th>
+        <th>EU output<br />
+</th>
+    </tr>
+    <tr>
+        <td>Enderdragon Crystal<br />
+</td>
+        <td>128 EU every 4 ticks (32EU/t) infinitely<br />
+</td>
+    </tr>
+    <tr>
+        <td>Vis (Thaumcraft 3)<br />
+</td>
+        <td>12,800 per Vis point (extracted from nearest Aura Node)<br />
+</td>
+    </tr>
+    <tr>
+        <td>Item Enchantments<br />
+</td>
+        <td>Special, see below<br />
+</td>
+    </tr>
+</table>
+
+<br />
+<strong>Note:</strong> <span style="line-height: 1.5;">Each Magic Energy Absorber can only absorb energy from one Enderdragon Crystal at a time, and each Enderdragon Crystal can only power one Magic Energy Absorber at a time.</span><br />
+<span style="line-height: 1.5;"><strong>Note 2:</strong> When set to drain Aura Nodes, an Absorber will drain 1 point of Aura every 5 seconds. If you intend upon using this solution, it is recommended that you have some means of regenrating the aura, or are ready to face the consequences of completely draining that node.</span><br />
+<strong><u>Warning</u>:</strong> The Magic Energy Absorber will rapidly produce Flux when actively draining from Aura Nodes. If a Moving Thaumic Instability (Wisp) gets too close to an active Magic Energy Absorber, the Absorber will explode, violently releasing &quot;<span style="background-color: #ffffff; line-height: 1.5;">holy craptons of Flux polluting the Nodes.&quot; (-GregoriusT)</span><br />
+<span style="background-color: #ffffff; line-height: 1.5;"><strong>Note 3:</strong> Vis Extraction Mode is currently nonfunctional.</span><br />
+<br />
+<br />
+<h3 id="toc2"><a name="x--Item Enchantments"></a>Item Enchantments</h3>
+ When draining Enchantments from items, each Enchantment has an energy value per level. To get the energy output from an enchanted item, take the base value of each enchantment, multiply it by the level of that enchantment, and then add all the enchantments together. The item itself does not matter, and will be returned, de-enchanted. <span style="line-height: 1.5;">Can disenchant Enchanted Books.</span><br />
+<strong>Note:</strong> The Absorber checks enchanted items to see if they are, in fact, enchantable. If the item is not enchantable, but have some enchantment built onto them, (such as the Silktouch III enchantment on the Rockcutter,) the Absorber will not absorb that enchantment. If the item is not enchantable, the item will be ignored and dropped in the output slot.<br />
+<br />
+<br />
+<strong>Example 1:</strong> Iron Boots with Feather Falling IV.<br />
+Feather Falling base value: 50 000 EU<br />
+multiply by level 4: 50 000 * 4 = 200 000 EU<br />
+Feeding a Magic Energy Absorber a pair of Feather Falling IV Iron Boots will generate approximately 200 000 EU, and return a pair of Iron Boots.<br />
+<strong>Example 2:</strong> An Efficiency V, Fortune III Diamond Pickaxe<br />
+Efficiency base value: 20 000 EU<br />
+multiply by level 5: 20 000 * 5 = 100 000 EU<br />
+Fortune base value: 166 666 EU<br />
+multiply by level 3: 166 666 * 3 = 499 998 EU<br />
+Add the enchantments: 100 000 + 499 998 = 599 998 EU<br />
+Feeding a Magic Energy Absorber an Efficiency V, Fortune III Diamond Pickaxe will generate approximately 600 000 EU, and return a Diamond Pickaxe.<br />
+<br />
+<strong>Note</strong><strong>:</strong> The actual energy output from de-enchanting items may sometimes vary. Variation so far has been observed to be between 16 and 700 EU. While this variation is mostly negligible, it is still notable.<br />
+A possible source of the variation is that the Magic Energy Absorber does not always completely drain its internal buffer. It seems to leave some 512EU stored at times for no readily apparent reason. (Tested via Debug Scanner on GT v3.09)<br />
+
+
+<table class="wiki_table">
+    <tr>
+        <th><strong>Enchantment</strong><br />
+</th>
+        <th>Energy (EU) / Level<br />
+</th>
+    </tr>
+    <tr>
+        <td>Sharpness<br />
+Efficiency<br />
+Power<br />
+</td>
+        <td>20 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Protection<br />
+</td>
+        <td>25 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Smite<br />
+Bane of Arthropods<br />
+</td>
+        <td>40 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Fire Protection<br />
+Feather Falling<br />
+Projectile Protection<br />
+</td>
+        <td>50 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Unbreaking<br />
+</td>
+        <td>66 666<br />
+</td>
+    </tr>
+    <tr>
+        <td>Knockback<br />
+</td>
+        <td>100 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Blast Protection<br />
+Haste<br />
+</td>
+        <td>125 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Respiration<br />
+Looting<br />
+Fortune<br />
+</td>
+        <td>166 666<br />
+</td>
+    </tr>
+    <tr>
+        <td>Fire Aspect<br />
+Punch<br />
+</td>
+        <td>250 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Thorns<br />
+</td>
+        <td>333 333<br />
+</td>
+    </tr>
+    <tr>
+        <td>Aqua Affinity<br />
+Flame<br />
+Firey Aura<br />
+</td>
+        <td>500 000<br />
+</td>
+    </tr>
+    <tr>
+        <td>Silk Touch<br />
+Infinity<br />
+</td>
+        <td>1 000 000<br />
+</td>
+    </tr>
+</table>
+
+<strong>Note:</strong> Allegedly, the actual formula used for determining Enchantment EU value is:<br />
+(1000000*tLevel)/(tEnchantment.getMaxLevel()*tEnchantment.getWeight())<br />
+However, the experimentally discovered values listed in the above chart are generally easier to understand.<br />
+<br />
+<h3 id="toc3"><a name="x--Usage Tips"></a>Usage Tips</h3>
+ <span style="line-height: 1.5;">SpwnX Engineering Block Usage Tip: If you have Thaumcraft 3 installed, Pure Node + Crystal Clusters + Magic Energy Absorber = &quot;Vis Reactor&quot; (large amounts of free energy, without as much Flux due to the Pure Node.) For safety, be sure to encase the Node.</span><br />
+<br />
+Experimental Idea: The Vis Reactor may be possible to operate using a combination of Pure Bees and Rejuvenating Bees, from the Forestry/Thaumcraft Magic Bees addon mod (formerly known as Thaumic Bees), in the place of the Crystal Clusters. The effectiveness of this strategy has <span style="text-decoration: line-through;">not yet</span> been somewhat tested and discovered to require very, very large numbers of apiaries to make it work. Pure Bees work wonders on the Flux generated by the Absorbers (every Pure Bee apiary removes 1 random Flux per 30-second bee tick), but it takes a pretty good number of Rejuvenating Bees to keep up with the Aura drain rate.<br />
+Note that the test results may have been corrupted by the use of too large a Node. (Large node trying to equalize Aura values between itself and other nodes in the loaded area)<br />
+<br />
+As a safety routine for either of these designs, be sure to encase the area of the Node in either solid blocks or a Force Field. Additionally, it is recommended that you place a Tesla Coil or something similar inside the encasement, so that the Wisps spawned by the Flux can be safely disposed of.<br />
+<br />
+PaladinOne Block Usage Tip: If you have Minefactory Reloaded, you can set up an Auto Enchanter, set it to Level 1, and feed it a stream of Books, then automatically send those Enchanted Books into one or more Absorbers (and then automatically send the disenchanted books back to the Auto Enchanter). Each book will only generate a few thousand EU, but automatically enchanting them consumes amazingly small amounts of Liquid Mob Essence.
+    </div>
+  </body>
+</html>
