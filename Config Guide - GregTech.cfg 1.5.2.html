@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Config Guide - GregTech.cfg 1.5.2</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="background-color: #ffffff;"><a name="Top of page"></a>GregTech.cfg is the base configuration file for GregTech. This file contains settings affecting some of the more core functions of GregTech, those that are not influenced by other mods. Yes, this does contain several of his nerfs.</span><br />
+<span style="background-color: #ffffff;">The following is a freshly generated copy+paste of GregTech.cfg, from a Minecraft 1.5.2 instance running GregTech 3.11.</span><br />
+<ul><li><span style="background-color: #ffffff;">All lines with bullet points, like this line, are comments added to clarify the lines in the configuration file. They are not part of the acutal file.</span></li></ul>Many lines in this file are related to one another. Comments will be added after sets of related lines.<br />
+<br />
+<a class="wiki_link" href="Config%20Guide.html">Return to the main Config Guide page</a><br />
+<div id="toc"><h1 class="nopad">Table of Contents</h1><div style="margin-left: 1em;"><a href="#GregTech.cfg">GregTech.cfg</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--compatability">compatability</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--features">features</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--general">general</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--machines">machines</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--unificator targets">unificator targets</a></div>
+<div style="margin-left: 3em;"><a href="#GregTech.cfg--world generation">world generation</a></div>
+</div>
+<h1 id="toc0"><a name="GregTech.cfg"></a>GregTech.cfg</h1>
+ #Configuration file<br />
+<ul><li><h3 id="toc1"><a name="GregTech.cfg--compatability"></a>compatability</h3>
+</li></ul>####################<br />
+<span style="line-height: 1.5;">#compatibility</span><br />
+####################<br />
+compatibility {<br />
+B:Buildcraft.Energy=true<br />
+B:Industrialcraft.Energy=true<br />
+B:UniversalElectricity.Energy=true<br />
+<ul><li>GregTech machinery can receive energy from IndustrialCraft<span style="font-size: 80%; vertical-align: super;">2</span>, Buildcraft, and Universal Electricity energy networks. If you are encountering compatibility issues, or if for balancing reasons you don't want your GregTech machines to receive power from one or more other energy systems, you can disable those interactions from here.</li><li>Remember that GregTech machines will not output any form of energy other than EU.</li></ul>}<br />
+<a class="wiki_link" href="Config%20Guide%20-%20GregTech.cfg%201.5.2.html#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc2"><a name="GregTech.cfg--features"></a>features</h3>
+</li></ul>####################<br />
+<span style="line-height: 1.5;">#features</span><br />
+####################<br />
+features {<br />
+I:DigitalChestMaxItemCount=32768<br />
+I:MatterFabricationRate=16666666<br />
+<ul><li>This is the amount of EU required for a Matter Fabricator to produce 1 UU Matter. It is based on (but independent from) the IC<span style="font-size: 80%; vertical-align: super;">2</span> Mass Fabricator's UU Matter cost, with Scrap applied (because the Matter Fabricator requires Scrap or a similar amplifier).</li></ul>I:MaxLogStackSize=64<br />
+I:MaxOreStackSize=64<br />
+I:MaxOtherBlockStackSize=64<br />
+I:MaxPlankStackSize=64<br />
+<ul><li>GregTech includes the option to reduce the stack size of various items, as a means of adding a little extra difficulty and realism to your mining runs. These values do not affect non-block items, and cannot be set lower than 16. If set to lower than 16, they will be read as 16.</li></ul>I:QuantumChestMaxItemCount=2000000000<br />
+<ul><li>The Digital Chest and Quantum Chest are industrially scaled-up versions of Factorization's Barrels. They store a very large amount of 1 item, and once an item has been inserted into them they will not accept any other items. Unlike Barrels, however, if the last item is removed from them, they will remember their internal filter, and still only accept that one item. If they are disassembled and re-placed, their internal filter will be reset.</li><li>Due to integer overflows, it may not be possible to set the Quantum Chest to have a higher capacity. Not that you would ever need to, as the default configuration value is 2 BILLION.</li></ul>B:Reactorplanner=true<br />
+B:Seedscanner=true<br />
+<ul><li>Reactor Planner and Seed Scanner are two functions of the GregTech Computer Cube. Set to false to disable those functions.</li><li>Reactor Planner allows you to lay out the design of a Nuclear Reactor and simulate it in a controlled, safe environment. So, if you have a reactor design that would blow up your base, you can find out about it before you build the reactor and blow up your base.</li><li>Seed Scanner allows you to place a Seed Bag (produced by an IC<span style="font-size: 80%; vertical-align: super;">2</span> crop) into the Computer Cube, and scan it for its attributes.</li></ul>I:TincellsPer4Tin=4<br />
+<ul><li>When it was originally implemented, this config line would simply change the output stack size of the conventional IC<span style="font-size: 80%; vertical-align: super;">2</span> crafting recipe for Empty Cells. (Originally, 4 Tin Ingots in a diamond shape -&gt; 16 Empty Cells.) It now does several more things.</li><li>It changes the stack size output of the Empty Cell crafting recipe (4 Tin Plates in a diamond)</li><li>It changes the Empty Cell crafting recipe in the Assembling Machine. By default, the Assembling Machine recipe is 1 Tin Ingot = 1 Empty Cell, however if this line is changed, the Assembling Machine recipe will change to fit the ratio set here. (For example, if you set I:TincellsPer4Tin=7, the Assembling Machine recipe would change to 4 Tin Ingots = 7 Empty Cells.) It does try to reduce the ratio to its lowest terms (hence the default 1=1 recipe). (For example, if you set I: TincellsPer4Tin=8, the Assembling Machine recipe would change to 1 Tin Ingot = 2 Empty Cells.)</li><li>Note that the differing ratios do not affect the time or energy cost of the Assembling Machine recipe.</li><li><span style="line-height: 1.5;">Additionally, when Centrifuging Lava in an Industrial Centrifuge, the Tin produced will be equal to 2 + (amount of tin spent in containers). By default (4 cells per 4 tin), Centrifuging 16 Lava Cells will produce 18 Tin Ingots. If set to 8 cells per 4 tin, Centrifuging 16 Laval Cells will produce 10 Tin Ingots.</span></li></ul>I:UpgradeStacksize=4<br />
+<ul><li>A nerf to the idea of dropping 10 Overclocker Upgrades on a vanilla IC2 Macerator.</li></ul>}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+GregTech.cfg+1.5.2#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc3"><a name="GregTech.cfg--general"></a>general</h3>
+</li></ul>####################<br />
+#general<br />
+####################<br />
+<span style="line-height: 1.5;">general {</span><br />
+B:ConnectedMachineCasingTextures=true<br />
+<ul><li>Like how Glass blocks placed next to each other will connect to form a window, Machine Casings placed next to each other will connect to form a large machine hull.</li><li>Different types of Machine Casings (Standard, Reinforced, Advanced) will not connect.</li><li>This is a client-side rendering option, and will have no effect on a server.</li></ul>B:Debug=false<br />
+B:Debug2=false<br />
+<ul><li>Adds a whole bunch more lines to the forge and gregtech log files. Not useful to the general player.</li></ul>B:ShowCapes=true<br />
+<ul><li>Whether or not to render GregTech Intergalactical capes. This is a client-side rendering option, and will have no effect on a server.</li></ul>B:TooEasyMode=false<br />
+<ul><li>A man who shall not be named spent a little too much time harassing Greg over his Forestry Bronze recipe nerf, and his removal of the Tin Bucket recipe. The result was this. TooEasyMode un-nerfs <span style="line-height: 1.5;">the conventional Bronze recipe (shapelessly craft 3 Copper ingots and 1 Tin ingot), but changes it to produce 111 Bronze Ingots. Additionally, a shapeless crafting recipe is added that turns 1 Dirt into 1 UU Matter, and the Tin Bucket recipe has been re-added (and produces 111 Buckets).</span></li><li>Don't use this.</li><li>Seriously, don't.</li></ul>B:WoodNeedsSawForCrafting=true<br />
+<ul><li>Probably the most controversial nerf Greg has done, added in version 3.10a, the vanilla crafting recipe of 1 Wood Log -&gt; 4 Wood Planks was nerfed to produce 2 Wood Planks, and a line of Saws were added. Crafting 1 Wood Log with a Saw above it will yield the conventional 4 Planks. Additionally, the 2 Planks -&gt; 4 Sticks recipe has been nerfed, producing 2 Sticks. Crafting 2 Planks with a Saw above them will yield the conventional 4 Sticks. Each of these recipes will consume 1 durability point from the Saw.</li><li>When this config is set to false, the vanilla recipes are not affected, but an additional set of recipes are added, and crafting Wood with a Saw will cause it to yield 5 Planks in stead of 4, and crafting Planks will a Saw will yield 5 Sticks in stead of 4.</li><li>This is the nerf (and the <u>completely ignored config line</u>) that caused that marvelous burst of outrage and code war between GregoriusT, mDiyo, the Feed The Beast forums, and the IndustrialCraft<span style="font-size: 80%; vertical-align: super;">2</span> forums. It also created a wonderful analogy in which Minecraft modding was compared to a hot dog with ketchup, and a hot dog with sulfuric acid. There were about 6 different interpretations of that analogy.</li><li>For more information on Saws, see the <a class="wiki_link" href="Tools.html">Tools</a> page.</li></ul>B:disable_STDERR=false<br />
+B:disable_STDOUT=false<br />
+<ul><li>If you have a mod that's generating a ton of error messages and spamming your logs, you can force Forge to not print out STDERR or STDOUT messages. This was implemented due to a bug that arose some time in April, wherein some mod was generating a 10-line error message stack trace every <u>tick</u>, and Forge client and server logs were expanding to hundreds of megabytes of text.</li></ul>B:harderstone=false<br />
+<ul><li>For that little extra bit of realism, this significantly increases the Hardness of vanilla Stone and Cobblestone, causing them to take much longer to mine.</li><li>Normally, Stone has a Harness of 1.5, Cobblestone has a Hardness of 2.0, and both have a Blast Resistance of 6.0.</li><li>With this enabled, Stone has a hardness of 16.0, Cobblestone has a Hardness of 12.0, and Stone Bricks have a Hardness of 24.0. Their Blast Resistances are equal to their new Hardness values.</li><li>Netherrack, Mossy Cobblestone, Sandstone, and End Stone are not affected by this config.</li><li>Stairs, Slabs, and Walls made of Stone are not affected.</li><li>Stone added by other mods (such as Underground Biomes) is not affected.</li></ul>B:hiddenores=true<br />
+<ul><li>GregTech Ores have a chance to camouflage themselves underground by stealing the texture of an adjacent Stone, Netherrack, or End Stone block. This has an added effect; if an Ore has no Stone blocks adjacent to itself, it will in stead assume a very obvious and colorful &quot;vein core&quot; texture.</li><li>A lot of people have found this to be very annoying, which is why this config line exists, and why SirusKing drew up a set of alternate textures.</li><li>For more information, see the <a class="wiki_link" href="Ores.html">Ores</a> page.</li><li>This is a client-side rendering option (as the ore camouflage effect is done in client-side rendering), and will have no effect on a server.</li></ul>B:online=true<br />
+<ul><li>GregTech has a dropbox that it polls whenever Minecraft starts, to check the GT cape list among other things. This is not an essential check, and if online=false will not be done. Useful for if you know you will be playing offline, and you don't want to see an error message.</li></ul>B:smallerStoneToolDurability=true<br />
+B:smallerWoodToolDurability=true<br />
+<ul><li>An additional pair of nerfs in GT 3.10a, these two configs add an extra incentive to get out of the stone age.</li><li>smallerWoodToolDurability sets all Wooden tools to have a durability of 13 (from the vanilla 60)</li><li>smallerStoneToolDurability sets all Stone tools to have a durability of 49 (from the vanilla 132)</li></ul>B:unsuspiciousHungerConfig=true<br />
+<ul><li>Minecraft &quot;Survival&quot; mode isn't all that hard to survive in. This config does two things:</li><li>It increases the rate at which food points are consumed passively</li><li>It adds &quot;hunger ticks,&quot; large ticks that occur about every 5 minutes that drain a large amount of hunger, based upon how many items the player is carrying in their inventory. These hunger ticks have been known to drain a player's entire food bar.</li></ul>}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+GregTech.cfg+1.5.2#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc4"><a name="GregTech.cfg--machines"></a>machines</h3>
+</li></ul>####################<br />
+#machines<br />
+####################<br />
+<ul><li>This set of configurations are a reminder of why one must be very careful when building a factory out of industrial-grade machinery. Probably the biggest rule is, &quot;don't build a factory outside.&quot;</li></ul>machines {<br />
+B:constant_need_of_energy=true<br />
+<ul><li>If a machine is not receiving the full EU/t required to run, it will stop producing, lose its production, and reset. Consequently, if you screw up your wiring or your energy feeds, or your Batbox dies, you can waste a lot of energy and get nothing done.</li><li>If set to false, if a machine runs out of energy, it will pause its production, as a vanilla IC<span style="font-size: 80%; vertical-align: super;">2</span> machine would.</li></ul>B:explosions_on_nonwrenching=true<br />
+<ul><li>If a machine is broken with a Pickaxe or destroyed by an explosion, the machine will explode rather than dropping. If this is set to false, a non-wrenched machine will drop as a Machine Parts item.</li></ul>B:fire_causes_explosions=true<br />
+<ul><li>If a machine catches fire, it has a chance to explode.</li></ul>B:lightning_causes_explosions=true<br />
+<ul><li><span style="line-height: 1.5;">If a machine is struck by lightning, it will explode.</span></li></ul>B:machines_flammable=true<br />
+<ul><li>Machines can catch and carry a fire. (Like wood.)</li></ul>B:rain_causes_explosions=true<br />
+<ul><li>Machines in rain storms have a chance to catch fire and/or explode. In-game, this can easily be prevented by putting any block above the machine, or by putting a <a class="wiki_link" href="Covers.html">Cover</a> on the top of the machine block.</li></ul>B:wirefire_on_explosion=true<br />
+<ul><li>This is the really dangerous one. When a GregTech machine explodes, it will emit energy from all 6 of its sides. It will emit one packet each of, in order, 32EU, 128EU, 512EU, 2048EU, and 8192EU. This will fry any cables short of Superconductor Wires, and overload and explode any machine not capable of accepting 8192EU/p (<strong>Quad-EV</strong>).</li></ul>}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+GregTech.cfg+1.5.2#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc5"><a name="GregTech.cfg--unificator targets"></a>unificator targets</h3>
+</li></ul><span style="line-height: 1.5;">####################</span><br />
+#unificatortargets<br />
+####################<br />
+unificatortargets {<br />
+B:Forestry=false<br />
+B:Railcraft=false<br />
+B:Redpower=true<br />
+B:Thaumcraft=true<br />
+B:ThermalExpansion=false<br />
+<ul><li>You know how many mods add some form of Copper? It's not uncommon to find 4 or 5 or 6 different Copper Ores underground. If each of those was treated as a separate substance, nobody would be able to get any of their crafting recipes right because everyone would be hunting for which mod added which form of copper for which recipe. This is where the Forge OreDictionary comes into play, allowing your 5 different Copper Ingots to be treated as the same substance, despite being added by 5 different mods and having 5 different textures. However, those 5 different Copper Ingots are still different items, and as such, do not stack. This is where GregTech OreDictionary Unification comes into play. With this function, whenever a recipe would produce a Copper Ingot, GregTech overwrites that recipe to cause it to produce the copper added by only one specific mod. This config block allows you to choose what mod takes precedence; which mod's copper is produced. Note that this does not affect dungeon loot.</li><li><span style="line-height: 1.5;">Additionally, the GregTech Electric Crafting Table contains a mode called Unification Mode. If set (the option looks like a DNA molecule with an arrow along the bottom), the Electric Crafting Table will check any OreDictionary-registered items with the Unification settings, and if they don't match (for example, a Thermal Expansion Copper Ingot, while B:ThermalExpansion=false), it will &quot;Unificate&quot; them to make them complaint with the Unification settings. For anti-exploit reasons, this function only works for metals and ores.</span></li><li><span style="line-height: 1.5;">By default, Redpower and Thaumcraft are set to true; Redpower to allow for making Microblocks out of metal storage blocks, and Thaumcraft because the Nuggets produced by its Infernal Furnace are not otherwise Unificated automatically, and we still want them to stack correctly.</span></li><li><span style="line-height: 1.5;">It is highly recommended that you select either Forestry, Railcraft, or Thermal Expansion, or leave them all to false. If more than one is set to true, it may lead to inconsistencies across different forms of recipes.</span></li><li><span style="line-height: 1.5;">If all are set to false, the GregTech versions of these materials will be produced.</span></li><li><span style="line-height: 1.5;">This config block usually works best if you just don't touch it.</span></li></ul>}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+GregTech.cfg+1.5.2#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc6"><a name="GregTech.cfg--world generation"></a>world generation</h3>
+</li></ul><span style="line-height: 1.5;">####################</span><br />
+<span style="line-height: 1.5;">worldgeneration</span><br />
+####################<br />
+worldgeneration {<br />
+B:Cooperiteore=true<br />
+B:EnderAsteroids=true<br />
+B:Olivineore=true<br />
+B:Sodaliteore=true<br />
+B:Tungstateore=true<br />
+<ul><li>Most of the world generation settings were moved to DynamicConfig in version 3.09g, however the End Ore settings remained here. These are simple toggles; whether or not to generate each of the 4 End Ores, and whether or not to generate Asteroids in the End.</li></ul>}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+GregTech.cfg+1.5.2#Top%20of%20page">top of page</a>
+    </div>
+  </body>
+</html>

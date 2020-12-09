@@ -1,0 +1,262 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - craft recipe experiment</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+T<span style="font-size: 13px; line-height: 1.5;">o wiki viewers:Leave this page since it contains nothing useful for you.</span><br />
+To wiki members:HELP! <span style="line-height: 1.5;">I don't really know a lot about HTML.I just simply copied the code that <a class="wiki_link_ext" href="http://www.minecraftwiki.net" rel="nofollow">official wiki</a> use.But I find the background is missing!</span><br />
+<span style="line-height: 1.5;"><strong>Ken:</strong> Well, you've done a whole lot better than any of us could do. I'll play with it a bit, and see if we can get a HTML guru to help us out.</span><br />
+<br />
+<h1 id="toc0"><a name="HTML Recipe Coding by epic_lulz"></a>HTML Recipe Coding by epic_lulz</h1>
+ Note: this uses HTML code so please enter this as a HTML widget. For reference see the AESU and IDSU pages.<br />
+This is inspired by the one used on Railcraft Wiki.<br />
+I could write some Javascript stuff based on the one in Railcraft Wiki that helps simplify stuff for editors but then people who disabled Javascript would not be able to see it. Is it okay?<br />
+<br />
+<h1 id="toc1"><a name="Extra Templates by Qwertygiy"></a>Extra Templates by Qwertygiy</h1>
+ I have simply cut and pasted screenshots around to get the GUI templates. They may be slightly off-center, awkward, or otherwise have problems. Feel free to change them; however, understand that you will have to adjust the coordinates appropriately for <em><u>every instance of that recipe used in the wiki.</u></em><br />
+<br />
+<h2 id="toc2"><a name="Extra Templates by Qwertygiy-All Recipes"></a>All Recipes</h2>
+ <span style="line-height: 1.5;">1. You need a picture of the recipe. You can obtain item recipe components from the gregtechmod.zip/mods/GregTech_Addon/textures. For blocks, you can find it by copying and pasting parts of <a class="wiki_link_ext" href="http://dl.dropboxusercontent.com/u/88825306/GT_Recipes.PNG" rel="nofollow">GT_Recipes.png</a>. Or, if the block is not found there, take an NEI screenshot with GUI Scale: Normal.</span><br />
+2. See Appendix A for templates to use as the HTML coding below is based off these templates.<br />
+3. Use an image editor that supports transparencies (e.g. GIMP, Paint.NET, Photoshop). MS Paint does NOT support transparencies and will not work properly.<br />
+4. Move the item images to the correct slots to form the recipe.<br />
+5. Upload them to this wiki. My convention is [ITEM_NAME]_[MACHINE_NAME].png. [MACHINE_NAME] is crafting, smelting, maceration, assembly, bending, etc.<br />
+6. Copy this code to a text editor. (e.g. Notepad, Wordpad, Notepad++)<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;file/view/[NAME_OF_YOUR_RECIPE].png&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;172&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;296&quot;</span> <span class="kw3">usemap</span><span class="sy0">=</span><span class="st0">&quot;[DISTINCT_NAMING]&quot;</span><span class="sy0">/</span>&gt;</span></pre>
+
+Remember to replace anything in brackets with the correct term. For the [DISTINCT_NAMING], my convention is [PAGE_NAME]_crafting_[NUMBER]. If the crafting recipe is the 1st in a page, put 1 for [NUMBER]. If it is 2nd, put 2. And so on.<br />
+7. Continue the code. [DISTINCT_NAMING] must be the same as the one used in step 6.<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">map</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;[DISTINCT_NAMING]&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;[DISTINCT_NAMING]&quot;</span>&gt;</span></pre>
+
+8. Continue the code. Repeat the following for every slot used in the recipe. Use the table in Appendix B to know what to put for [COORDS]. [PAGENAME_OF_MATERIAL] must be the name of a page for the item in that recipe slot. If there is no page for the item, leave it blank between the quotation marks. [NAME_ON_MOUSEOVER] is the name of the item.<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;[COORDS]&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;[PAGENAME_OF_MATERIAL]&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;[NAME_ON_MOUSEOVER]&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;[NAME_ON_MOUSEOVER]&quot;</span><span class="sy0">/</span>&gt;</span></pre>
+
+9. Finally end the code with<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">map</span>&gt;</span></pre>
+
+10. Create an &quot;Other HTML&quot; widget in the page you want to edit and copy the code in your text editor into the space in the widget. Click &quot;Preview&quot; to check you've done things right, then click &quot;Submit&quot;. &quot;Preview&quot; will not show the widget properly until the page has been saved with at least one recipe widget.<br />
+<br />
+<h2 id="toc3"><a name="Extra Templates by Qwertygiy-Example Recipe Widget Code"></a>Example Recipe Widget Code</h2>
+ <br />
+This is an example recipe widget for the Lathe.<br />
+
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.html4strict  {font-family:monospace;}
+.html4strict .imp {font-weight: bold; color: red;}
+.html4strict .kw2 {color: #000000; font-weight: bold;}
+.html4strict .kw3 {color: #000066;}
+.html4strict .es0 {color: #000099; font-weight: bold;}
+.html4strict .br0 {color: #66cc66;}
+.html4strict .sy0 {color: #66cc66;}
+.html4strict .st0 {color: #ff0000;}
+.html4strict .nu0 {color: #cc66cc;}
+.html4strict .sc-2 {color: #404040;}
+.html4strict .sc-1 {color: #808080; font-style: italic;}
+.html4strict .sc0 {color: #00bbdd;}
+.html4strict .sc1 {color: #ddbb00;}
+.html4strict .sc2 {color: #009900;}
+.html4strict span.xtra { display:block; }
+
+-->
+</style><pre class="html4strict"><span class="sc2">&lt;<span class="kw2">img</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;file/view/GTLatheRecipe1.png&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;172&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;296&quot;</span> <span class="kw3">usemap</span><span class="sy0">=</span><span class="st0">&quot;Lathe_crafting_1&quot;</span> <span class="sy0">/</span>&gt;</span> <span class="sc2">&lt;<span class="kw2">map</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;Lathe_crafting_1&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;Lathe_crafting_1&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,34,66,66&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Plate+Bending+Machine&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,34,102,66&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Changed+Recipes&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Advanced Circuit&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Advanced Circuit&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,34,138,66&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Plate+Bending+Machine&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,70,66,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Gears&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Gear&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Gear&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,70,102,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Covers&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Conveyor Module&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Conveyor Module&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,70,138,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Gears&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Gear&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Gear&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;34,106,66,138&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Plate+Bending+Machine&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;70,106,102,138&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Machine+Hulls&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Machine Hull&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Machine Hull&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;106,106,138,138&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Plate+Bending+Machine&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Steel Plate&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">area</span> <span class="kw3">coords</span><span class="sy0">=</span><span class="st0">&quot;222,70,254,102&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;Lathe&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;Lathe&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;Lathe&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">map</span>&gt;</span></pre>
+
+<br />
+<h2 id="toc4"><a name="Extra Templates by Qwertygiy-Appendix A - Templates"></a>Appendix A - Templates</h2>
+ <ul><li>Shaped Crafting: <a href="files/shaped_crafting.png">shaped_crafting.png</a></li><li>Shapeless Crafting: <a href="files/shapeless_crafting.png">shapeless_crafting.png</a></li><li>Furnace Smelting: <a href="files/Blank_Smelting.png">Blank_Smelting.png</a></li><li>Macerating: <a href="files/Blank_Macerator.png">Blank_Macerator.png</a></li><li>Extracting: <a href="files/Blank_Extractor.png">Blank_Extractor.png</a></li><li>Compressing: <a href="files/Blank_Compressor.png">Blank_Compressor.png</a></li><li>Wiremill: <a href="files/Blank_Wiremill.png">Blank_Wiremill.png</a></li><li>Bending: <a href="files/Blank_Bending.png">Blank_Bending.png</a></li><li>Canning (Incomplete): <a href="files/Blank_Canning.png">Blank_Canning.png</a></li><li>Others: WIP</li></ul><br />
+<h2 id="toc5"><a name="Extra Templates by Qwertygiy-Appendix B - [COORDS]"></a><span style="line-height: 1.5;">Appendix B - [COORDS]</span></h2>
+ <ul><li>Shaped and Shapeless Crafting. Use the one in the corresponding grid of the crafting table.</li></ul>
+
+<table class="wiki_table">
+    <tr>
+        <td>34,34,66,66<br />
+</td>
+        <td>70,34,102,66<br />
+</td>
+        <td>106,34,138,66<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td>34,70,66,102<br />
+</td>
+        <td>70,70,102,102<br />
+</td>
+        <td>106,70,138,102<br />
+</td>
+        <td style="text-align: center;">--&gt;<br />
+</td>
+        <td>222,70,254,102<br />
+</td>
+    </tr>
+    <tr>
+        <td>34,106,66,138<br />
+</td>
+        <td>70,106,102,138<br />
+</td>
+        <td>106,106,138,138<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+</table>
+
+<ul><li>Furnace Smelting.</li></ul>
+
+<table class="wiki_table">
+    <tr>
+        <td>70,34,102,66<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td>^ ^ ^<br />
+</td>
+        <td>-&gt;<br />
+</td>
+        <td>190,70,222,102<br />
+</td>
+    </tr>
+    <tr>
+        <td>70,106,102,138<br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+</table>
+
+<ul><li>Macerating, Extracting, Compressing, Wiremill, Bending.</li></ul>
+
+<table class="wiki_table">
+    <tr>
+        <td>78,36,110,68<br />
+</td>
+        <td>-&gt;<br />
+</td>
+        <td>186,36,218,68<br />
+</td>
+    </tr>
+</table>
+
+
+    </div>
+  </body>
+</html>

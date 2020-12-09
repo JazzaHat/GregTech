@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Config Guide - Block Item IDs 1.5.2</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="line-height: 1.5;"><a name="Top of page"></a>BlockItemIDs.cfg is pretty much exactly what its name says; this file contains all the ID numbers used by all blocks and items added by GregTech. If you have a block or item ID conflict that throws a crash, this is where you could fix it on the GregTech end.</span><br />
+<span style="line-height: 1.5;">The following is a freshly generated copy+paste of BlockItemIDs.cfg, from a Minecraft 1.5.2 instance running GregTech 3.11.</span><br />
+<ul><li>All lines with bullet points, like this line, are comments added to clarify the lines in the configuration file. They are not part of the acutal file.</li></ul><br />
+<a class="wiki_link" href="Config%20Guide.html">Return to the main Config Guide page</a><br />
+<div id="toc"><h1 class="nopad">Table of Contents</h1><div style="margin-left: 1em;"><a href="#BlockItemIDs.cfg">BlockItemIDs.cfg</a></div>
+<div style="margin-left: 3em;"><a href="#BlockItemIDs.cfg--blocks">blocks</a></div>
+<div style="margin-left: 3em;"><a href="#BlockItemIDs.cfg--crops"> crops</a></div>
+<div style="margin-left: 3em;"><a href="#BlockItemIDs.cfg--items"> items</a></div>
+</div>
+<h1 id="toc0"><a name="BlockItemIDs.cfg"></a>BlockItemIDs.cfg</h1>
+ <br />
+<span style="font-size: 13px; line-height: 1.5;"># Configuration file</span><br />
+<ul><li><h3 id="toc1"><a name="BlockItemIDs.cfg--blocks"></a>blocks</h3>
+</li></ul>####################<br />
+<span style="font-size: 1.066em;"># block</span><br />
+####################<br />
+block {<br />
+I:Block=4058<br />
+<ul><li>Material storage blocks (Lead, Electrum, Zinc, Olivine, Green Sapphire, Platinum, Tungsten, Nickel, Tungstensteel, Invar, Osmium, Iridium), and Iridium-Reinforced Tungstensteel</li><li>Mobs cannot spawn on these blocks</li></ul>I:Block2=4057<br />
+<ul><li>Metal storage blocks (Silver, Ruby, Sapphire, Aluminium, Titanium, Chrome, Steel, Brass), Advanced and Highly Advanced Machine Blocks, LESU-Blocks (depricated), Machine Casings, Iridium Reinforced Stone, and Fusion Coils</li><li>Mobs cannot spawn on these blocks</li></ul>I:LightSource=4061<br />
+<ul><li>This is currently unused, but is generated anyway. GregTech 4.02h actually does add a Redstone Lamp, but that is a 1.6.2 version.</li></ul>I:Machine=4059<br />
+<ul><li>ALL GregTech <a class="wiki_link" href="Machines.html">machinery</a> blocks</li><li>All blocks in this ID with damage values lower than 16 (4059:2 thru 4059:15) are older (GregTech 2.0, MC 1.4.7 and before) machines. At the end of GT 2.0, MC 1.4.7, almost all GregTech machines were converted from TileEntities to MetaTileEntities, and many of their attributes were standardized. This is what allowed for the <a class="wiki_link" href="Upgrades.html">Upgrade</a> and <a class="wiki_link" href="Covers.html">Cover</a> systems, and for all machines to occupy only 1 block ID.</li></ul>I:Ore=4060<br />
+<ul><li>GregTech <a class="wiki_link" href="Ores.html">Ore</a> blocks</li></ul>}<br />
+<a class="wiki_link" href="Config%20Guide%20-%20Block%20Item%20IDs%201.5.2.html#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc2"><a name="BlockItemIDs.cfg--crops"></a><span style="line-height: 1.5;"> crops</span></h3>
+</li></ul>####################<br />
+# crops<br />
+####################<br />
+<ul><li>GregTech adds several new Crops to expand the IndustrialCraft<span style="font-size: 80%; vertical-align: super;">2</span> crop system. Good luck breeding all of them.</li><li>There is a Book (Crop Dictionary by Mr. Kenny) that can be found in dungeon chests, that explains some of the aspects of each of these plants.</li><li>This section probably shouldn't need to be messed with, unless you have other mods that add new IC<span style="font-size: 80%; vertical-align: super;">2</span> Crops, and there is a conflict between them.</li></ul>crops {<br />
+I:Argentia=145<br />
+I:Blazereed=130<br />
+I:Bobsyeruncleranks=127<br />
+I:Brown_Mushrooms=143<br />
+I:Coppon=142<br />
+I:Corium=132<br />
+I:Corpseplant=133<br />
+I:Creeperweed=134<br />
+I:Diareed=128<br />
+I:Eggplant=131<br />
+I:Enderbloom=135<br />
+I:Flax=125<br />
+I:Indigo=124<br />
+I:Meatrose=136<br />
+I:Milkwart=137<br />
+I:Oilberries=126<br />
+I:Plumbilia=146<br />
+I:Red_Mushrooms=144<br />
+I:Slimeplant=138<br />
+I:Spidernip=139<br />
+I:Tearstalks=140<br />
+I:Tine=141<br />
+I:Withereed=129<br />
+}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+Block+Item+IDs+1.5.2#Top%20of%20page">top of page</a><br />
+<ul><li><h3 id="toc3"><a name="BlockItemIDs.cfg--items"></a><span style="line-height: 1.5;"> items</span></h3>
+</li></ul>####################<br />
+# item<br />
+####################<br />
+<ul><li>There are a lot of items added by GregTech. Any items which have multiple variants, including variants added by other mods, have their names in ALL CAPITAL LETTERS (like CELLS full of various liquids), and consume only 1 ID and a large number of damage values to represent a large number of different items.</li><li>COMPONENTS are <span style="line-height: 1.5;">Circuits, Superconductors (item), Covers, Duct Tape, Sawblades, Grinders, Heating Coils, Upgrades, Circuit Boards, Machine Hulls, Empty Spray Cans, Turbine Blades, and Gears</span></li><li><span style="line-height: 1.5;"><span style="line-height: 1.5;">MATERIALS are </span>Credits, Ingots, Oil Berries, Indigo, Flour, Plates, Gems, and Metal Rods</span></li><li><span style="line-height: 1.5;">Unlike the other ID sections, all of these IDs are 256 higher in-game.</span></li></ul>item {<br />
+I:CELLS=21002<br />
+I:COMPONENTS=21003<br />
+I:CheatyDevice=21018<br />
+I:CloakingDevice=21038<br />
+I:Crowbar=21064<br />
+I:DUSTS=21001<br />
+I:Dataorb=21043<br />
+I:DebugScanner=21055<br />
+I:Destructopack=21033<br />
+I:Drill_Advanced=21123<br />
+I:Empty_Tool_01=21112<br />
+I:Empty_Tool_02=21113<br />
+I:Empty_Tool_03=21114<br />
+I:Empty_Tool_04=21121<br />
+I:Empty_Tool_05=21122<br />
+I:Empty_Tool_06=21124<br />
+I:FileBronze=21087<br />
+I:FileIron=21086<br />
+I:FileSteel=21088<br />
+I:FileTungstenSteel=21089<br />
+I:GASSES=21014<br />
+I:HammerBronze=21074<br />
+I:HammerIron=21073<br />
+I:HammerRubber=21072<br />
+I:HammerSteel=21075<br />
+I:HammerTungstenSteel=21076<br />
+I:HandheldSonictron=21032<br />
+I:Heliumcoolant060k=21034<br />
+I:Heliumcoolant120k=21035<br />
+I:Heliumcoolant180k=21036<br />
+I:IronMortar=21030<br />
+I:JackHammerDiamond=21042<br />
+I:JackHammerIron=21039<br />
+I:JackHammerSteel=21041<br />
+I:LIQUIDS=21013<br />
+I:Lamphelmet=21044<br />
+I:LapotronicEnergycrystal=21037<br />
+I:Lapotronpack=21045<br />
+I:LavaFilter=21085<br />
+I:LithiumCell=21054<br />
+I:LithiumbatteryEmpty=21056<br />
+I:LithiumbatteryFull=21057<br />
+I:Lithiumpack=21058<br />
+I:MATERIALS=21000<br />
+I:Mortar=21031<br />
+I:NCSensorCard=21016<br />
+I:NCSensorKit=21017<br />
+I:NUGGETS=21005<br />
+I:NaKcoolant060k=21060<br />
+I:NaKcoolant120k=21061<br />
+I:NaKcoolant180k=21062<br />
+I:Neutronreflector=21040<br />
+I:PLASMA=21015<br />
+I:Plutonium1=21051<br />
+I:Plutonium2=21052<br />
+I:Plutonium4=21053<br />
+I:Rockcutter=21046<br />
+I:SMALLDUSTS=21004<br />
+I:Saw_Advanced=21120<br />
+I:Saw_Bronze=21116<br />
+I:Saw_Electric=21119<br />
+I:Saw_Iron=21115<br />
+I:Saw_Steel=21117<br />
+I:Saw_Tungstensteel=21118<br />
+I:Scanner=21063<br />
+I:Screwdriver=21065<br />
+I:SolderingLead=21079<br />
+I:SolderingTin=21078<br />
+I:SolderingTool=21077<br />
+I:Spray_00=21096<br />
+I:Spray_01=21097<br />
+I:Spray_02=21098<br />
+I:Spray_03=21099<br />
+I:Spray_04=21100<br />
+I:Spray_05=21101<br />
+I:Spray_06=21102<br />
+I:Spray_07=21103<br />
+I:Spray_08=21104<br />
+I:Spray_09=21105<br />
+I:Spray_10=21106<br />
+I:Spray_11=21107<br />
+I:Spray_12=21108<br />
+I:Spray_13=21109<br />
+I:Spray_14=21110<br />
+I:Spray_15=21111<br />
+I:Spray_Bug=21090<br />
+I:Spray_CFoam=21093<br />
+I:Spray_Hardener=21092<br />
+I:Spray_Hydration=21095<br />
+I:Spray_Ice=21091<br />
+I:Spray_Pepper=21094<br />
+I:Teslastaff=21047<br />
+I:Thorium1=21048<br />
+I:Thorium2=21049<br />
+I:Thorium4=21050<br />
+I:TurbineBronze=21080<br />
+I:TurbineCarbon=21084<br />
+I:TurbineMagnalium=21082<br />
+I:TurbineSteel=21081<br />
+I:TurbineTungstensteel=21083<br />
+I:WrenchAdvanced=21071<br />
+I:WrenchBronze=21069<br />
+I:WrenchElectric=21070<br />
+I:WrenchRefIron=21067<br />
+I:WrenchSteel=21066<br />
+I:WrenchTungstensteel=21068<br />
+}<br />
+<a class="wiki_link" href="http://gregtechcommunitywiki.wikispaces.com/Config+Guide+-+Block+Item+IDs+1.5.2#Top%20of%20page">top of page</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Advanced Pump</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+The Advanced Pump is an Electronics-tier machine which supplants the simpler Buildcraft Pump. Compared to the BC Pump, the Advanced Pump drains faster, has greater throughput, greater &quot;reach&quot; (area which will drain), and is able to use Covers. Its drawbacks are that it requires EU rather than MJ, which requires less infrastructure to generate (i.e. Redstone Engines are sufficient for a BC Pump); it uses much more energy overall; the Adv Pump uses Mining Pipes which must be retrieved, optimally with a Miner (WARNING: remember the voltage differences!); and of course it is significantly more expensive and laborious to produce.<img src="http://i.imgur.com/uegQSGw.png" alt="external image uegQSGw.png" title="external image uegQSGw.png" align="right" /><br />
+<br />
+For server admins, a major advantage to the Advanced Pump is that it does not cause client or server-side Block Updates when it drains a block of fluid. Fluid (liquid) Pumps have classically been extremely laggy to operate because every block pumped up caused Block Updates in all adjacent blocks, and caused them to generate Flowing [Fluid] blocks. Block updates and Flowing [Fluid] blocks become extremely lag-intensive when they occur en masse. As a result, many modded servers using Buildcraft have banned Nether lava pumping outright.<br />
+<br />
+A minor oddity of the Advanced Pump is that because it does not cause block updates, it often does not visually appear to be working, even as it is draining that ocean for you; the fluid blocks will be removed, but they will still render. If the chunks it works in are unloaded and re-loaded, the pumped blocks will simply not be there (and the non-pumped blocks will still have not updated or started flowing).<br />
+<br />
+<h3 id="toc0"><a name="x--Tips"></a>Tips</h3>
+ <ul><li>The <a class="wiki_link" href="Upgrades.html">Pneumatic Generator Upgrade</a> allows the Advanced Pump to accept MJ as power. <strong>//MJ support is no longer in newer versions</strong></li><li>The Advanced Pump covers an area approximately 4-5 chunks2 and is limited in depth only by its supply of Mining Pipes.</li><li>Large oil geysers will require more than 64 Mining Pipes; pipes can be automatically resupplied through the top face, such as by an <a class="wiki_link" href="Electric%20Buffer.html">Electric Buffer</a>.</li><li>When pumping Oil, the Advanced Pump will not continue to drain after the Oil source has been depleted (making it valuable in exploiting offshore oil).</li></ul><br />
+Applicable <a class="wiki_link" href="Upgrades.html">Upgrades</a>: O T B M S
+    </div>
+  </body>
+</html>

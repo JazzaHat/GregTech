@@ -1,0 +1,396 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Covers</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<h3 id="toc0"><a name="x--If you were redirected to this page, the item you clicked is a cover. Look for its recipe and info below."></a><span style="background-color: #ffffff;">If you were redirected to this page, the item you clicked is a cover. Look for its recipe and info below.</span></h3>
+ Almost all GregTech blocks accept Covers. Covers are placed on the sides of machines, and depending on their function, enable or disable certain types of interactions. They also block that side of the machine, for purposes of rain safety.<br />
+<span style="background-color: #ffffff;">Machines that accept Covers can only have one cover per face.</span><br />
+<span style="background-color: #ffffff;">Most covers interact (or deny interaction with) with either the machines they are placed on, the block the cover is facing, or both.</span><br />
+<span style="background-color: #ffffff;"><strong>Note:</strong> <strong>ALL</strong> covers, except the Computer Monitor, block right-click access to their side.</span><br />
+Covers that are intended for automation (pump/conveyor/drain...) <span style="line-height: 1.5;">access the machine's internal inventory and use a tiny amount of EU to function, drawn from the machine's internal energy storage. If the covered machine has been given </span><strong><span style="line-height: 1.5;">M</span></strong><span style="line-height: 1.5;">J or </span><strong><span style="line-height: 1.5;">S</span></strong><span style="line-height: 1.5;">team <a class="wiki_link" href="Upgrades.html">Upgrades</a>, the covers can use this energy as well. Solar Panel covers supply energy (EU) to the machine's internal energy storage. <strong>Note:</strong> If a machine does not have an internal energy storage, energy is not consumed by these covers.</span><br />
+<br />
+<span style="background-color: #ffffff;">Covers can only be removed using a Crowbar. Railcraft Crowbars will also work.</span><br />
+<br />
+<br />
+When a machine is disassembled with a <a class="wiki_link" href="Tools.html#Wrench%20in%20world">Wrench</a>, its covers are kept. A <a class="wiki_link" href="Tools.html#Crowbar">Crowbar</a> is required to remove Covers from a machine.<br />
+<br />
+<h3 id="toc1"><a name="x--Screwdrivers"></a><strong>Screwdrivers</strong></h3>
+ <span style="background-color: #ffffff;">Screwdrivers modify covers, changing their behavior by cycling through their available functions. On covers such as the Conveyor Belt and the Pump Cover, these include </span>Export, Import, Export (<span class="highlight">condition</span>al), Import (<span class="highlight">condition</span>al), Export (inver cond), Import (invert cond), Export allow Input, Import allow Output, Export allow Input (<span class="highlight">condition</span>al), Import allow Output (<span class="highlight">condition</span>al), Export allow Input (invert cond) and finally, Import allow Output (invert cond). &quot;Conditional&quot; refers to the Redstone signal or lack thereof that the machine is interpreting through a Redstone Machine Controller.<br />
+<br />
+<span style="background-color: #ffffff;">They can also be used to change the frequency of Wireless Redstone covers.</span><br />
+<br />
+You can also get a free cover that blocks all interactions by right clicking an uncovered machine facing with a screwdriver. Right click again to get a red cover that only blocks Redstone.<br />
+<br />
+<h3 id="toc2"><a name="x--Utility/Automation Covers :"></a><span style="background-color: #ffffff;">Utility/Automation Covers :</span></h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Effect<br />
+</th>
+        <th>Recipe<br />
+</th>
+        <th>Assembler<br />
+</th>
+    </tr>
+    <tr>
+        <td>Conveyor Module<br />
+</td>
+        <td>Input/Output items from covered inventory<br />
+</td>
+        <td>2x Electronic Circuit/Basic Circuit (UE), 3x Iron/Aluminium Plate, 3x glass, 1x RE-Battery/Battery (UE)<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Pump Module<br />
+</td>
+        <td>Input/Output liquids from covered inventory (1000mB/t)<br />
+</td>
+        <td>1x Pump, 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Item Transport Valve<br />
+</td>
+        <td>Work as both Conveyor and Pump Modules<br />
+</td>
+        <td>1x Conveyor Module, 1x Pump module<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Shutter<br />
+</td>
+        <td>Selectively blocks pipe interactions<br />
+</td>
+        <td>1x Iron Door, 2x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Drain<br />
+</td>
+        <td>Collects liquids in front of it or rain if placed on top<br />
+</td>
+        <td>2x Iron bars, 2x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Solar Panel<br />
+</td>
+        <td>Produces 1 EU/t during the day for the covered inventory<br />
+<span style="line-height: 1.5;">(must be on top)</span><br />
+</td>
+        <td>2x Silicon Plate, 2x Electronic Circuit/Basic Circuit (UE), 1x Carbon Plate, 1x Glass Pane<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Crafting Module<br />
+</td>
+        <td>Rightclick the covered face to access a workbench<br />
+</td>
+        <td>1x Crafting table, 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Computer Monitor<br />
+</td>
+        <td>Blocks all interactions with the covered face<br />
+except for right clicks.<br />
+</td>
+        <td>4x Aluminium Plate, 1x Glass Pane, 1x Glowstone Dust, 1x Lime Dye, 1x Lapis/Indigo Dye, 1x Red Dye<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">Energy Flow Circuit<br />
+</td>
+        <td>Blocks all interactions with the covered face<br />
+<span style="line-height: 1.5;">except for energy transfer.</span><br />
+</td>
+        <td>1x Lapotron Crystal, 1x Elite Circuit Board<br />
+4x Adv. Circuit (IC²/UE), 1x Iridium Plate, 2x Tungsten Plate, <span style="line-height: 1.5;">2x Lapotron Crystal -&gt; 4x Energy Flow Circuit</span><br />
+</td>
+        <td>Yes<br />
+<span style="line-height: 1.5;">No</span><br />
+</td>
+    </tr>
+    <tr>
+        <td>Data Control Circuit<br />
+</td>
+        <td>Blocks all interactions with the covered face<br />
+except for Redstone.<br />
+</td>
+        <td>1x Data Storage Circuit, 1x Elite Circuit Board<br />
+4x Adv. Circuit (IC²/UE), 1x Iridium Plate, 4x Data Storage Circuit -&gt; 4x Data Control Circuit<br />
+</td>
+        <td>Yes<br />
+No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Metal Plates<br />
+</td>
+        <td>Mimics the texture of the block which the plate is composed.<br />
+Blocks all interactions.<br />
+</td>
+        <td>Process an ingot of the block you want to mimic in a <a class="wiki_link" href="Plate%20Bending%20Machine.html">Plate Bending Machine</a><br />
+Process a compressed material block you want to mimic in a <a class="wiki_link" href="Plate%20Cutting%20Machine.html">Plate Cutting Machine</a><br />
+</td>
+        <td>Plate Bending/<br />
+Cutting<br />
+</td>
+    </tr>
+    <tr>
+        <td>Heat Vent<br />
+</td>
+        <td>-1,5% EU per operation, requires unobstructed facing<br />
+</td>
+        <td>4x Iron Ingot/4x Aluminium Plate, 4x Iron Bars<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Component Heat Vent<br />
+</td>
+        <td>-1,5% EU per operation, requires unobstructed <span style="line-height: 1.5;">facing</span><br />
+</td>
+        <td>1x Heat Vent, 2x Dense Copper Plate<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Reactor Heat Vent<br />
+</td>
+        <td>-1,5% EU per operation, requires unobstructed <span style="line-height: 1.5;">facing</span><br />
+</td>
+        <td>1x Heat Vent, 4x Tin Ingots, 4x Iron Bars<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Advanced Heat Vent<br />
+</td>
+        <td>-3% EU per operation, requires unobstructed facing<br />
+</td>
+        <td>2x Heat Vent, 1x Diamond, 6x Iron Bars<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Overclocked Heat Vent<br />
+</td>
+        <td>-3% EU per operation, requires unobstructed facing<br />
+</td>
+        <td>1x Reactor Heat Vent, 2x Gold Ingots<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center;"><h4 id="toc3"><a name="x--Utility/Automation Covers :-LV, MV, and HV Solar Panel are disabled by default. They can be re-enabled via the Dynamic Config."></a><strong>LV, MV, and HV Solar Panel are disabled by default. They can be re-enabled via the Dynamic Config.</strong></h4>
+</td>
+    </tr>
+    <tr>
+        <td>LV Solar Panel<br />
+</td>
+        <td>As Solar Panel cover, but produces 8 EU/t during the day<br />
+and 1 EU/t during the night.<br />
+</td>
+        <td>8x Solar Panel, 1x Electronic Circuit<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>MV Solar Panel<br />
+</td>
+        <td>As Solar Panel cover, but produces 64 EU/t during the day<br />
+and 8 EU/t during the night<br />
+</td>
+        <td>8x LV Solar Panel, 1x Transformer Upgrade<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>HV Solar Panel<br />
+</td>
+        <td>As Solar Panel cover, but produces 512 EU/t during the day<br />
+and 64 EU/t during the night.<br />
+</td>
+        <td>8x MV Solar Panel, 1x HV-Transformer Upgrade<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+</table>
+
+<br />
+<br />
+<h3 id="toc4"><a name="x--Redstone Covers :"></a>Redstone Covers :</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Effect<br />
+</th>
+        <th>Recipe<br />
+</th>
+        <th>Assembler<br />
+</th>
+    </tr>
+    <tr>
+        <td>Item Detector<br />
+</td>
+        <td>Outputs a Redstone signal depending on stored items<br />
+</td>
+        <td>1x Weighted Pressure Plate (Heavy), 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Liquid Detector<br />
+</td>
+        <td>Outputs a Redstone signal<span style="line-height: 1.5;"> depending on stored liquids</span><br />
+</td>
+        <td>1x Weighted Pressure Plate (Light), 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>EU Meter<br />
+</td>
+        <td>Outputs a Redstone signal<span style="line-height: 1.5;"> depending on stored energy</span><br />
+</td>
+        <td>1x EU-Reader, 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Signalizer<br />
+</td>
+        <td>Applies a constant Redstone signal to a machine<br />
+</td>
+        <td>1x Redstone Torch, 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Machine Controller<br />
+</td>
+        <td>Allows the control of a machine or other covers through Redstone signals<br />
+</td>
+        <td>1x Lever, 1x Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Active Machine Detector<br />
+</td>
+        <td>Outputs a Redstone signal<span style="line-height: 1.5;"> depending on work progress.</span><br />
+</td>
+        <td>1x Redstone Comparator, 1x Iron/Aluminium Plate, 1x Redstone Torch<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Conductor<br />
+</td>
+        <td>Throughputs the strongest incoming Redstone signal to the cover facing<br />
+</td>
+        <td>1x Redstone Dust, 1x Iron Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <th colspan="2">Wireless Redstone Covers :<br />
+</th>
+        <th>These covers are for sending or receiving wireless Redstone signals<br />
+</th>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td>Transmitter (IN)<br />
+</td>
+        <td>Transmits signals coming from the attached machine<br />
+</td>
+        <td>2x Redstone Torch, 2x <span style="line-height: 1.5;">Certus/Nether Quartz/Dust (AE/vanilla), 2x Redstone Comparator, </span><br />
+<span style="line-height: 1.5;">1x Advanced Circuit (IC²/UE),1x Silver plate, 1x ender pearl </span><br />
+<span style="line-height: 1.5;"><strong>or</strong> shapelessly craft a Transmitter (OUT)</span><br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Transmitter (OUT)<br />
+</td>
+        <td>Transmits signals coming from outside the attached machine<br />
+</td>
+        <td>Shapelessly craft a Transmitter (IN)<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Receiver (IN)<br />
+</td>
+        <td>Receives signals, outputs into the attached machine<br />
+</td>
+        <td>2x Redstone Dust, 2x <span style="line-height: 1.5;">Certus/Nether Quartz/Dust (AE/vanilla), 2x Redstone Comparator, </span><br />
+<span style="line-height: 1.5;">1x Advanced Circuit (IC² /UE), 1x Gold plate, 1x ender pearl </span><br />
+<strong><span style="line-height: 1.5;">or</span></strong><span style="line-height: 1.5;"> shapelessly craft a Receiver (OUT)</span><br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Receiver (OUT)<br />
+</td>
+        <td>Receives signals, outputs out of the attached machine<br />
+</td>
+        <td>Shapelessly craft a Receiver (IN)<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+</table>
+
+<br />
+To set the frequency of a Wireless Redstone cover, right click the cover with an item. Each item has its own frequency. You can further adjust the frequency with a <a class="wiki_link" href="Tools.html#Screwdriver">Screwdriver</a>.
+    </div>
+  </body>
+</html>
