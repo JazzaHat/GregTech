@@ -1,0 +1,319 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Upgrades</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+Since version 2.90d, almost all GregTech machines can accept upgrades.<br />
+If a machine can be upgraded, its tooltip will contain the label &quot;Possible Upgrades:&quot; followed by a series of letters, reflecting the upgrades the machine will accept. Not every machine can accept every upgrade.<br />
+
+
+<table class="wiki_table">
+    <tr>
+        <th><h3 id="toc0"><a name="x--Label"></a>Label</h3>
+</th>
+        <th><h3 id="toc1"><a name="x--Upgrade Accepted"></a>Upgrade Accepted</h3>
+</th>
+    </tr>
+    <tr>
+        <td>O<br />
+</td>
+        <td>Overclocker<br />
+</td>
+    </tr>
+    <tr>
+        <td>T<br />
+</td>
+        <td>Transformer<br />
+</td>
+    </tr>
+    <tr>
+        <td>B<br />
+</td>
+        <td>Battery (Energy Storage)<br />
+</td>
+    </tr>
+    <tr>
+        <td>M<br />
+</td>
+        <td>MJ<span style="line-height: 1.5;"> (Pneumatic Generator)</span><br />
+</td>
+    </tr>
+    <tr>
+        <td>S<br />
+</td>
+        <td>Steam (Steam Engine)<br />
+</td>
+    </tr>
+</table>
+
+<span style="line-height: 1.5;">Upgrades are installed by holding the Upgrade item in your hand, and right clicking the machine you want to upgrade.</span><br />
+Machines that accept upgrades can only accept 16 upgrades total.<br />
+Overclocker and Transformer upgrade items in inventory stack up to 4. (configurable)<br />
+Some upgrades are crafted at a crafting table, while some must be crafted via the Assembling Machine (Assembler).<br />
+Upgrades cannot be removed once installed. [This can be bypassed for automatic machines, by enabling the conversion to IC² machines in the config.]<br />
+Machines, when wrenched and retrieved as items, will retain their upgrades, and their tooltips will state the installed upgrades.<br />
+The GregTech Portable Scanner can also show what upgrades a machine has installed.<br />
+<br />
+<h3 id="toc2"><a name="x--Energy Storage upgrades :"></a>Energy Storage upgrades :</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Internal storage bonus<br />
+</th>
+        <th>Recipe<br />
+</th>
+        <th>Assembler<br />
+</th>
+    </tr>
+    <tr>
+        <td>Energy Storage*<br />
+</td>
+        <td>10k EU<br />
+</td>
+        <td>1x RE-Battery, 1x Electronic Circuit, 2x Ins. Copper Cable, 5x Wooden Planks<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Energy Crystal<br />
+</td>
+        <td>100k EU<br />
+</td>
+        <td>1x Energy Crystal, 1x Refined Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Lithium Battery<br />
+</td>
+        <td>100k EU<br />
+</td>
+        <td>1x Lithium Battery, 1x Refined Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Lapotron Crystal<br />
+</td>
+        <td>1M EU<br />
+</td>
+        <td>1x Lapotron Crystal, 1x Refined Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Energy Orb<br />
+</td>
+        <td>10M EU<br />
+</td>
+        <td>1x Energy Orb, 1x Refined Iron/Aluminium Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Redstone Energy Cell<br />
+</td>
+        <td>100k MJ<br />
+</td>
+        <td>1x Energy Cell Frame (Full) [TE], 1x Energy Storage Upgrade -&gt; 4x upgrades<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Steam Tank<br />
+</td>
+        <td>64 Buckets<br />
+</td>
+        <td>2x Steel plate, 1x Glass pane<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+</table>
+
+*vanilla IC² upgrade<br />
+<strong>Note:</strong> As of version 4.03d, all EU storage upgrades above most basic 10k, have 10x their original values. So, Energy Crystal and Lithium Battery store 1M, Lapotron Crystal stores 10M, and Energy Orb stores 100M EU. This is based off of a change made in IC2 Experimental that created an additional tier between the Batbox and MFE.<br />
+There is no limit on how many of each individual energy storage upgrade can be installed to a machine (except for the 16 upgrade total cap).<br />
+Energy stored in the different storage types (EU, MJ, Steam) cannot be inter-converted, and machines will only output EU. However, if a machine contains MJ or Steam, it will consume them before it starts consuming EU.<br />
+<strong>Note:</strong> Higher tier EU storage upgrades can only be applied if the machine has enough Transformer upgrades.<br />
+For example, in order to accept an Energy Crystal upgrade, the machine must be able to accept HV.<br />
+In order to accept a Lapotron Crystal upgrade, the machine must be able to accept EV.<br />
+<br />
+<h3 id="toc3"><a name="x--Other Upgrades :"></a>Other Upgrades :</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Effect<br />
+</th>
+        <th>Recipe<br />
+</th>
+        <th>Assembler<br />
+</th>
+    </tr>
+    <tr>
+        <td>Overclocker*<br />
+</td>
+        <td>Operation time x1/2, total EU usage x2, EU/t required to operate x4<br />
+</td>
+        <td>3x Coolant Cell, 1x Electronic Circuit, 2x Ins. Copper Cable<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td><br />
+</td>
+        <th>Overclocker Alternate recipe ------------------------------------------------&gt;<br />
+</th>
+        <td>Replace 3x Coolant Cell with 1x NaK/Helium Coolant cell -&gt; 2x Overclockers<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>Transformer*<br />
+</td>
+        <td>Maximum EU/p input x4, EU/t output x4, 1st upgrade outputs 4 packets<br />
+</td>
+        <td>1x MV Transformer, 1x Electronic Circuit, 2x 2xIns. Gold Cable<br />
+</td>
+        <td>No<br />
+</td>
+    </tr>
+    <tr>
+        <td>HV-Transformer<br />
+</td>
+        <td>Same as above, but required for the last two transformer upgrades.<br />
+</td>
+        <td>1x HV Transformer, 1x Transformer Upgrade<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Pneumatic Generator<br />
+</td>
+        <td>Allows the machine to use MJ as an energy source (1 MJ -&gt; 1 EU)<br />
+<strong>NO LONGER WORKS - MJ SUPPORT DROPPED</strong><br />
+</td>
+        <td>1x Generator, 1x Iron/Steel Gear (BC/RC)<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+    <tr>
+        <td>Steam<br />
+</td>
+        <td>Allows the machine to use Steam as an energy source (2 mB -&gt; 1 EU)<br />
+</td>
+        <td>1x Industrial Steam Engine (RC), 2x Steel Plate<br />
+</td>
+        <td>Yes<br />
+</td>
+    </tr>
+</table>
+
+*vanilla <span style="line-height: 1.5;">IC² upgrade</span><br />
+<span style="line-height: 1.5;">Unlike the energy storage upgrades, each machine is limited to having:</span><br />
+<ul><li><span style="line-height: 1.5;">4 Overclocker Upgrades</span></li><li><span style="line-height: 1.5;">2 (LV machine) or 1 (MV machine) Transformer Upgrades</span></li><li><span style="line-height: 1.5;">2 HV-Transformer Upgrades</span></li><li><span style="line-height: 1.5;">1 Pneumatic Generator Upgrade <strong>- Doesn't actually allow MJ support anymore</strong></span></li><li><span style="line-height: 1.5;">1 Steam Upgrade</span></li></ul><strong>Note:</strong> <span style="line-height: 1.5;">If a machine is overclocked too much, it may require more EU/t than its default storage capacity. To compensate for this, add an Energy Storage upgrade.</span><br />
+<strong>Note 2:</strong> 4 Overclocker Upgrades will increase a machine's required EU/t to 256x its original value. So, a 4x-overclocked Blast Furnace would consume 32,768EU/t.<br />
+<br />
+<br />
+<span style="font-size: 1.1em; line-height: 1.5;"><strong>Utility Upgrades :</strong></span><br />
+
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Effect<br />
+</th>
+        <th>Recipe<br />
+</th>
+    </tr>
+    <tr>
+        <td>Kanthal Heating Coil<br />
+</td>
+        <td>Increases efficiency of Electric Furnaces (GT only) by 100%<br />
+</td>
+        <td>4 Kanthal Ingots in a <a class="wiki_link" href="Automatic%20Wiremill.html">Wiremill</a><br />
+</td>
+    </tr>
+    <tr>
+        <td>Nichrome Heating Coil<br />
+</td>
+        <td>Increases efficiency of Electric Furnaces (GT only) by 50%<br />
+</td>
+        <td>5 Nichrome Ingots in a <span style="line-height: 1.5;">Wiremill</span><br />
+</td>
+    </tr>
+    <tr>
+        <td>Kanthal Heating Coil x4<br />
+</td>
+        <td>Increases <a class="wiki_link" href="Industrial%20Blast%20Furnace.html">Industrial Blast Furnace</a> Heat by 500K<br />
+</td>
+        <td>4 Kanthal Ingots in a <span style="line-height: 1.5;">Wiremill</span><br />
+</td>
+    </tr>
+    <tr>
+        <td>Nichrome Heating Coil x4<br />
+</td>
+        <td>Increases Industrial Blast Furnace Heat by 500K<br />
+</td>
+        <td>5 Nichrome Ingots in a <span style="line-height: 1.5;">Wiremill</span><br />
+</td>
+    </tr>
+</table>
+
+<strong><span style="line-height: 1.5;">Note:</span></strong> <span style="line-height: 1.5;">Kanthal Heating Coil(s) must be applied before Nichrome Heating Coil(s).</span><br />
+<span style="line-height: 1.5;">An Automatic E-Furnace with a Kanthal Heating Coil installed will perform operations in 50% of their normal time for 50% of their normal energy (200% efficiency).</span><br />
+<span style="line-height: 1.5;">An Automatic E-Furnace with both a Kanthal and a Nichrome Heating Coil installed will perform operations in 33% of their normal time for 33% of their normal energy (300% efficiency).</span><br />
+<span style="line-height: 1.5;">Alloy Smelters can be upgraded in the same way Automatic E-Furnaces can.</span><br />
+<br />
+Utility Upgrades can each be used once per machine.<br />
+<br />
+As of v4.04a, Kanthal and Nichrome ingots were added, and the Heating Coil recipes were transferred to the Wiremill. Previously, Kanthal Heating Coils were crafted with <span style="line-height: 1.5;">3 (Refined) Iron Ingots, 3 Chrome Ingots, 3 Aluminium Ingots -&gt; 3x Kanthal Heating Coils, and Nichrome Heating Coils were crafted with 4 Nickel Ingots and 1 Chrome Ingot. If Railcraft was installed, both of these recipes took place in the Rolling Machine.</span><br />
+<br />
+<hr />
+<br />
+<span style="line-height: 1.5;">In Gregtech version 4.06c, more annoying sounds were added to machines. These sounds are rather loud and annoying after a while, but can be turned off on a machine by putting a Muffler Upgrade on the machine. Items with sounds like the Debug and Portable Scanner have sounds which can't be stopped.</span><br />
+
+
+<table class="wiki_table">
+    <tr>
+        <th>Type<br />
+</th>
+        <th>Effect<br />
+</th>
+        <th>Recipe<br />
+</th>
+    </tr>
+    <tr>
+        <td>Muffler Upgrade<br />
+</td>
+        <td>Stops any Gregtech machine making sounds<br />
+</td>
+        <td>1x Iron/Aluminium Plate and 2x Wood Pulp in an Assembler<br />
+</td>
+    </tr>
+</table>
+
+
+    </div>
+  </body>
+</html>

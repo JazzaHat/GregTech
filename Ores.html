@@ -1,0 +1,409 @@
+<html>
+  <head>
+    <title>GregtechCommunityWiki - Ores</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<strong><span style="font-size: 110%;">Note: This is all pre Gregtech 5.00. Gregtech 5.00+ overhauls ore generation, and should probably have a separate page.</span></strong><br />
+GregTech adds 14 ores to world generation, spread across the Overworld, the Nether, and the End.<br />
+As of version 3.07h, all GregTech ores have multiple textures. When adjacent to their native Stone, Netherrack, Endstone, Black Granite, or Red Granite, they have a chance to assume the texture of that adjacent stone. This is done in client-side rendering, and different faces of the ore can have different textures. Additionally, all GT ores had a very noticeable &quot;vein core&quot; texture added, which ore blocks will assume if there is no stone adjacent to them. <span style="line-height: 1.5;">This behavior is configurable from GregTech.cfg, with the option &quot;B:hiddenores&quot;, in the 'general' section</span><br />
+Until the worldgen overhaul in version 3.09a, the generation of all GregTech ores could be individually toggled via the 'worldgen' section of GregTech.cfg. The config flags for End Asteroids and the four End Ores are still there, but the options for Overworld and Nether Ores have been moved to the 'worldgen' section of DynamicConfig.cfg. ('worldgen' is the last section in both config files.)<br />
+As of version 4.00a, the worldgen configuration was expanded to include options for vein sizes and spawn rates. Notably, this includes the details that most Overworld ores have two config sections, with one labeled [ore]_high referring to the ore's spawning rate at higher elevations. End ore spawn rates still cannot be customized, merely toggled.<br />
+<div id="toc"><h1 class="nopad">Table of Contents</h1><div style="margin-left: 1em;"><a href="#Overworld Ores">Overworld Ores</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Bauxite">Bauxite</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Galena">Galena</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Ruby">Ruby</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Sapphire">Sapphire</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Iridium">Iridium</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Tetrahedrite">Tetrahedrite</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Cassiterite">Cassiterite</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Nickel">Nickel</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Sphalerite">Sphalerite</a></div>
+<div style="margin-left: 2em;"><a href="#Overworld Ores-Granite">Granite</a></div>
+<div style="margin-left: 1em;"><a href="#Nether Ores">Nether Ores</a></div>
+<div style="margin-left: 2em;"><a href="#Nether Ores-Pyrite">Pyrite</a></div>
+<div style="margin-left: 2em;"><a href="#Nether Ores-Cinnabar">Cinnabar</a></div>
+<div style="margin-left: 2em;"><a href="#Nether Ores-Sphalerite">Sphalerite</a></div>
+<div style="margin-left: 1em;"><a href="#End Ores">End Ores</a></div>
+<div style="margin-left: 2em;"><a href="#End Ores-Tungstate">Tungstate</a></div>
+<div style="margin-left: 2em;"><a href="#End Ores-Olivine">Olivine</a></div>
+<div style="margin-left: 2em;"><a href="#End Ores-Sodalite">Sodalite</a></div>
+<div style="margin-left: 2em;"><a href="#End Ores-Sheldonite">Sheldonite</a></div>
+<div style="margin-left: 1em;"><a href="#Ore Core Textures">Ore Core Textures</a></div>
+</div>
+
+
+<table class="wiki_table">
+    <tr>
+        <th colspan="4">Quick Reference GregTech Ore Chart<br />
+</th>
+    </tr>
+    <tr>
+        <th>Ore<br />
+</th>
+        <th>Color<br />
+</th>
+        <th>Pickaxe<br />
+</th>
+        <th>Silktouch?<br />
+</th>
+    </tr>
+    <tr>
+        <td><strong>Overworld</strong><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Bauxite<br />
+</td>
+        <td>Brown<br />
+</td>
+        <td>Stone<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Galena<br />
+</td>
+        <td>Black / White<br />
+</td>
+        <td>Stone<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Ruby<br />
+</td>
+        <td>Red<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Sapphire<br />
+</td>
+        <td>Blue<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Iridium<br />
+</td>
+        <td>Bluish White<br />
+</td>
+        <td>Diamond<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Tetrahedrite<br />
+</td>
+        <td>Black / Red<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Cassiterite<br />
+</td>
+        <td>White<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Nickel<br />
+</td>
+        <td>Purple, Blue core<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Sphalerite<br />
+</td>
+        <td>Orange<br />
+</td>
+        <td>Stone<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>Nether</strong><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Pyrite<br />
+</td>
+        <td>Yellow<br />
+</td>
+        <td>Stone<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Cinnabar<br />
+</td>
+        <td>Red<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Sphalerite<br />
+</td>
+        <td>Orange<br />
+</td>
+        <td>Stone<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td><strong>End</strong><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+        <td><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Tungstate<br />
+</td>
+        <td>Black<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Olivine<br />
+</td>
+        <td>Green<br />
+</td>
+        <td>Diamond<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Sodalite<br />
+</td>
+        <td>Blue<br />
+</td>
+        <td>Iron<br />
+</td>
+        <td><span style="background-color: #00e0ff;">Recommended</span><br />
+</td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">Sheldonite<br />
+</td>
+        <td>Yellow<br />
+</td>
+        <td>Diamond<br />
+</td>
+        <td><span style="background-color: #ff0000;">Not necessary</span><br />
+</td>
+    </tr>
+</table>
+
+Those that are marked as &quot;recommended silktouch&quot; will drop dusts or gems when mining with a pickaxe. Silktouching those ores and grinding them on an industrial grinder increases the total yield.<br />
+<h1 id="toc0"><a name="Overworld Ores"></a><span style="font-size: 150%;">Overworld Ores</span></h1>
+ <h2 id="toc1"><a name="Overworld Ores-Bauxite"></a><span style="font-size: 1.066em; line-height: 1.5;">Bauxite</span></h2>
+ <span style="font-size: 1.066em; line-height: 1.5;"><img src="/mainSpace/files/image003.png" alt="image003.png" title="image003.png" /></span><br />
+Brown below the green, Bauxite is an ore that spawns at many altitudes below forests and grasslands. While its spawn rates are not extremely high, its vein size is fairly large. It cannot be smelted, but when Macerated yields 4 Dust, which can be Electrolyzed in sets of 12 to produce Aluminium, Hydrogen, and Titanium. Bauxite is the only source of Titanium, at a ratio of 6 Bauxite Ore to 1 Titanium Dust.<br />
+<span style="line-height: 1.5;">Bauxite Ore can be mined with a Stone Pickaxe or better.</span><br />
+Bauxite Ore is more likely to be found at higher elevations. There will likely be between 2 and 5 veins of roughly 16 ore in each chunk of the correct biome.<br />
+<br />
+<span style="line-height: 1.5;">Bauxite Ore can be Macerated to yield 8 Dust, and if processed in an Industrial Grinder will yield additional Aluminium and Titanium Dusts. Bauxite Dust can be Electrolyzed in sets of 39 to produce Aluminium, Hydrogen, and Titanium. </span><br />
+<br />
+<strong>Bauxite can spawn between layers 32 to 120 in the following biomes:</strong><br />
+<ul><li><span style="line-height: 1.5;">Plains</span></li><li><span style="line-height: 1.5;">Forest</span></li><li><span style="line-height: 1.5;">Forest Hills</span></li><li><span style="line-height: 1.5;">Bald Hill</span></li><li><span style="line-height: 1.5;">Forest Island</span></li><li><span style="line-height: 1.5;">Pine Lands</span></li><li><span style="line-height: 1.5;">Highlands</span></li><li><span style="line-height: 1.5;">Lowlands</span></li><li><span style="line-height: 1.5;">Rainforest</span></li><li><span style="line-height: 1.5;">Autumn Woods</span></li><li><span style="line-height: 1.5;">Autumn Forest</span></li><li><span style="line-height: 1.5;">Birch Forest</span></li><li><span style="line-height: 1.5;">Birch Hills</span></li><li><span style="line-height: 1.5;">Forested Hills</span></li><li><span style="line-height: 1.5;">Forested Island</span></li><li><span style="line-height: 1.5;">Green Hills</span></li><li><span style="line-height: 1.5;">Meadow</span></li><li><span style="line-height: 1.5;">Redwood Forest</span></li><li><span style="line-height: 1.5;">Redwood Lush</span></li><li><span style="line-height: 1.5;">Woodlands</span></li><li><span style="line-height: 1.5;">Twilight Forest</span></li><li><span style="line-height: 1.5;">Dense Twilight Forest</span></li><li><span style="line-height: 1.5;">Dark Forest</span></li><li><span style="line-height: 1.5;">Enchanted Forest</span></li><li><span style="line-height: 1.5;">Woodland</span></li><li><span style="line-height: 1.5;">Woodlands</span></li><li><span style="line-height: 1.5;">Woodland Mountains</span></li><li><span style="line-height: 1.5;">Thicket</span></li><li><span style="line-height: 1.5;">Seasonal Forest</span></li><li><span style="line-height: 1.5;">Quagmire</span></li><li><span style="line-height: 1.5;">Orchard</span></li><li><span style="line-height: 1.5;">Pasture</span></li><li><span style="line-height: 1.5;">Mystic Grove</span></li><li><span style="line-height: 1.5;">Marsh</span></li><li><span style="line-height: 1.5;">Maple Woods</span></li><li><span style="line-height: 1.5;">Grove</span></li><li><span style="line-height: 1.5;">Grassland</span></li><li><span style="line-height: 1.5;">Garden</span></li><li><span style="line-height: 1.5;">Fungi Forest</span></li><li><span style="line-height: 1.5;">Deciduous Forest</span></li><li><span style="line-height: 1.5;">Coniferous Forest</span></li><li><span style="line-height: 1.5;">Cherry Blossom Grove</span></li></ul><br />
+<h2 id="toc2"><a name="Overworld Ores-Galena"></a>Galena</h2>
+ <img src="/mainSpace/files/image006.png" alt="image006.png" title="image006.png" /><br />
+Way down there and everywhere, Galena is a non biome-dependent ore of Silver and Lead, with a little Sulfur thrown in. It spawns below level 32, like Gold, but in larger veins. Galena Ore cannot be smelted, however Galena Dust can either be Electrolyzed to produce Silver, Lead, and Sulfur dust, or smelted in an Industrial Blast Furnace to produce Silver and Lead Ingots. <span style="line-height: 1.5;">Galena Ore can be processed with Mercury in an Industrial Grinder to increase its yield of Silver Dust from 0 to 1.</span><br />
+<span style="line-height: 1.5;">Galena Ore can be mined with a Stone Pickaxe or better.</span><br />
+<span style="line-height: 1.5;">One out of every three chunks will contain a vein of roughly 16 ore.</span><br />
+Note: It is usually better to smelt the Dust in an Industrial Blast Furnace. It will not yield Sulfur, but it will yield slightly more Silver and Lead, and use much less energy and time than the Electrolyzer.<br />
+<br />
+<h2 id="toc3"><a name="Overworld Ores-Ruby"></a>Ruby</h2>
+ <img src="/mainSpace/files/image005.png" alt="image005.png" title="image005.png" /><br />
+Treasures of the Desert, Rubies are found as single blocks deep below the hot sands. (below level 32, in Desert biomes) Rubies themselves can be Cut into Ruby Lenses, which are used in the crafting of <a class="wiki_link" href="Changed%20Recipes.html#Mining%20Laser">Mining Lasers</a>. Additionally, Ruby Dust is used in the crafting of Energium Dust, used to make Energy Crystals or Glass Fibre Cables. Ruby Dust <span style="line-height: 1.5;">can also be Electrolyzed, and is one of the possible sources of Chrome.</span><br />
+Ruby Ore must be Silktouched to acquire the block, when otherwise broken it will drop 1 Ruby and 0-1 Red Garnets.<br />
+Red Garnets can be Cut to make Red Garnet Lenses, which are used in crafting <a class="wiki_link" href="Changed%20Recipes.html#Mining%20Laser">Mining Lasers</a>, and their Dusts can be Centrifuged and Electrolyzed to produce a variety of other materials.<br />
+Ruby and Red Garnet Blocks can be used in a Beacon base.<br />
+Ruby Ore can be mined with an Iron Pickaxe or better.<br />
+Roughly 8 Ruby Ore will be found in each chunk of the correct biomes.<br />
+Note: Unless you really want Red Garnets for some reason, we strongly recommend using a Rock Cutter, an Iridium Drill, or a Silktouch or Fortune enchanted Pickaxe to mine this block, due to its rarity and value.<br />
+<br />
+<strong>Ruby can spawn in the following biomes, below level 32:</strong><br />
+<ul><li><span style="line-height: 1.5;">Desert</span></li><li><span style="line-height: 1.5;">Desert Hills</span></li><li><span style="line-height: 1.5;">Sahel</span></li><li><span style="line-height: 1.5;">Dunes</span></li><li><span style="line-height: 1.5;">Desert Mountains</span></li><li><span style="line-height: 1.5;">Mountainous Desert</span></li><li><span style="line-height: 1.5;">Mountain Ridge</span></li><li><span style="line-height: 1.5;">Savanna(h)</span></li><li><span style="line-height: 1.5;">Shrubland</span></li><li><span style="line-height: 1.5;">Wasteland</span></li><li><span style="line-height: 1.5;">Fire Swamp</span></li><li><span style="line-height: 1.5;">Highlands</span></li><li><span style="line-height: 1.5;">Volcano</span></li><li><span style="line-height: 1.5;">Steppe</span></li><li><span style="line-height: 1.5;">Scrubland</span></li><li><span style="line-height: 1.5;">Prairie</span></li><li><span style="line-height: 1.5;">Lush Desert</span></li><li><span style="line-height: 1.5;">Deadlands</span></li><li><span style="line-height: 1.5;">Badlands</span></li><li><span style="line-height: 1.5;">Mesa</span></li><li><span style="line-height: 1.5;">Outback</span></li><li><span style="line-height: 1.5;">Canyon</span></li><li><span style="line-height: 1.5;">Desert Island</span></li><li><span style="line-height: 1.5;">Volcano Island</span></li><li><span style="line-height: 1.5;">Desert Oil Field</span></li></ul><br />
+<h2 id="toc4"><a name="Overworld Ores-Sapphire"></a>Sapphire</h2>
+ <img src="http://gregtechcommunitywiki.wikispaces.com/file/view/image004.png/507144862/image004.png" alt="image004.png" title="image004.png" /><br />
+Sapphire Ore generates as single blue blocks deep below the deep blue sea. (below level 32, in Ocean biomes)<br />
+Sapphire Ore must be Silktouched to acquire the block, when otherwise broken it will drop 1 Sapphire and 0-1 Green Sapphires. Sapphires and Green Sapphires currently have no uses on their own, but their Dusts can be Centrifuged and Electrolyzed. They both can be compressed to make a block of (Green) Sapphire which looks rather nice.<br />
+Sapphire and Green Sapphire Blocks can be used in a Beacon base.<br />
+Sapphire Ore can be mined with an Iron Pickaxe or better.<br />
+Roughly 8 Sapphire Ore will be found in each chunk of the correct biomes.<br />
+Note: We strongly recommend using a Rock Cutter, an Iridium Drill, or a Silktouch or Fortune enchanted Pickaxe to mine this block, due to its rarity and value.<br />
+<br />
+<strong>Sapphire can spawn in the following biomes, below level 32:</strong><br />
+<ul><li><span style="line-height: 1.5;">Ocean</span></li><li><span style="line-height: 1.5;">Beach</span></li><li><span style="line-height: 1.5;">Frozen Ocean</span></li><li><span style="line-height: 1.5;">Twilight Lake</span></li><li><span style="line-height: 1.5;">Twilight Steam</span></li><li><span style="line-height: 1.5;">Lake Border</span></li><li><span style="line-height: 1.5;">Glacier</span></li><li><span style="line-height: 1.5;">Mangrove</span></li><li><span style="line-height: 1.5;">Oasis</span></li><li><span style="line-height: 1.5;">Origin Valley</span></li><li><span style="line-height: 1.5;">Sacred Springs</span></li><li><span style="line-height: 1.5;">Tropics</span></li><li><span style="line-height: 1.5;">Tropical Islands</span></li><li><span style="line-height: 1.5;">Estuary</span></li><li><span style="line-height: 1.5;">Ocean Oil Field</span></li></ul><br />
+<h2 id="toc5"><a name="Overworld Ores-Iridium"></a>Iridium</h2>
+ <img src="/mainSpace/files/image002.png" alt="image002.png" title="image002.png" /><br />
+The rarest and most valuable of all the ores, Iridium Ore can spawn anywhere below level 99, in any biome, but only spawns as single ore blocks and has only a 20% chance to spawn per chunk. However, it has an additional chance to spawn inside Black Granite formations.<br />
+Iridium Ore must be Silktouched to acquire the block, when otherwise broken it will drop 1 Iridium Ore (item).<br />
+Iridium Ore can be mined with a Diamond Pickaxe or equivalent.<br />
+Note 1: Until version 3.09a, it was possible to configure the spawn rate of Iridium Ore (% chance per chunk to spawn), however in the world gen overhaul, that configuration option was lost. This was fixed in version 4.00a.<br />
+Note 2: <span style="color: #ff0000;">We strongly recommend using a Rock Cutter, Iridium Drill, or Silktouch or Fortune enchanted Pickaxe</span> to mine this block, due to its extreme rarity and value. On average, Fortune III will drop 1.5 Iridium Ore, while Silk Touching and processing it will yield as much as 2.5 (<a class="wiki_link" href="Industrial%20Grinder.html">Industrial Grinder)</a><br />
+<br />
+<h2 id="toc6"><a name="Overworld Ores-Tetrahedrite"></a>Tetrahedrite</h2>
+ <img src="/mainSpace/files/image008.jpg" alt="image008.jpg" title="image008.jpg" /><br />
+Added in version 3.08g, Tetrahedrite is a variant of Copper Ore. It can be found in jungle, swamp, extreme hills, or mushroom biomes. It can also be found in small amounts in Red Granite. When processed in an Industrial Grinder, it yields small amounts of Antimony (Sb), which can be combined with Lead to form Battery Alloy, or Tin to form Soldering Alloy. Additionally, Tetrahedrite Ore can be processed in an Industrial Grinder with a Sodium Persulfate cell to increase its yield of Copper Dust from 2 to 3.<br />
+In newer versions, when Tetrahedrite Ore is Macerated or smashed with a Hammer, it returns Tetrahedrite Dust. This dust is functionally equivalent to Copper Dust. When smelted straight, Tetrahedrite Ore returns Copper Ingots.<br />
+Tetrahedrite Ore can be mined with an Iron Pickaxe or better.<br />
+Tetrahedrite Ore is more likely to be found at higher elevations. There will likely be up to 2 veins of roughly 32 ore in each chunk of the correct biome.<br />
+<br />
+<strong>Tetrahedrite can spawn between layers 32 to 120 in the following biomes:</strong><br />
+<ul><li><span style="line-height: 1.5;">Jungle</span></li><li><span style="line-height: 1.5;">Jungle Hills</span></li><li><span style="line-height: 1.5;">Swampland</span></li><li><span style="line-height: 1.5;">Mushroom Island</span></li><li><span style="line-height: 1.5;">Mushroom Island Shore</span></li><li><span style="line-height: 1.5;">Extreme Hills</span></li><li><span style="line-height: 1.5;">Extreme Hills Edge</span></li><li><span style="line-height: 1.5;">Bog</span></li><li><span style="line-height: 1.5;">Cliffs</span></li><li><span style="line-height: 1.5;">Valley</span></li><li><span style="line-height: 1.5;">Canyon</span></li><li><span style="line-height: 1.5;">Flying Mountains</span></li><li><span style="line-height: 1.5;">Rock Mountains</span></li><li><span style="line-height: 1.5;">Jungle Island</span></li><li><span style="line-height: 1.5;">Rock Island</span></li><li><span style="line-height: 1.5;">Mountain Ridge</span></li><li><span style="line-height: 1.5;">Volcano Island</span></li></ul><br />
+<h2 id="toc7"><a name="Overworld Ores-Cassiterite"></a>Cassiterite</h2>
+ <img src="/mainSpace/files/image007.jpg" alt="image007.jpg" title="image007.jpg" /><br />
+Also added in 3.08g, Cassiterite is a highly concentrated variant of Tin Ore. It can be found in icy, mountainous, or mushroom biomes.<span style="line-height: 1.5;"> In a conventional Furnace, it smelts into two Tin ingots, and when processed in an Industrial Grinder, it produces large quantities of Tin but no other by-products. It spawns very rarely, but in extremely large veins.</span><br />
+Cassiterite Ore can be mined with an Iron Pickaxe or better.<br />
+Cassiterite Ore is more likely to be found at higher elevations. Cassiterite Ore will likely not be found in every chunk, but appears in veins of roughly 32 ore.<br />
+<br />
+<strong>Cassiterite can spawn between layers 32 to 120 in the following biomes:</strong><br />
+<ul><li><span style="line-height: 1.5;">Taiga</span></li><li><span style="line-height: 1.5;">Taiga Hills</span></li><li><span style="line-height: 1.5;">Ice Plains</span></li><li><span style="line-height: 1.5;">Ice Mountains</span></li><li><span style="line-height: 1.5;">Mushroom Island</span></li><li><span style="line-height: 1.5;">Mushroom Island Shore</span></li><li><span style="line-height: 1.5;">Extreme Hills</span></li><li><span style="line-height: 1.5;">Extreme Hills Edge</span></li><li><span style="line-height: 1.5;">Alps</span></li><li><span style="line-height: 1.5;">Glacier</span></li><li><span style="line-height: 1.5;">Ice Wasteland</span></li><li><span style="line-height: 1.5;">Flying Mountains</span></li><li><span style="line-height: 1.5;">Rock Mountains</span></li><li><span style="line-height: 1.5;">Snow Mountains</span></li><li><span style="line-height: 1.5;">Snow Forest</span></li><li><span style="line-height: 1.5;">Tall Pine Forest</span></li><li><span style="line-height: 1.5;">Tundra</span></li><li><span style="line-height: 1.5;">Snow Island</span></li><li><span style="line-height: 1.5;">Rock Island</span></li><li><span style="line-height: 1.5;">Mountain Ridge</span></li><li><span style="line-height: 1.5;">Volcano Island</span></li></ul><br />
+<h2 id="toc8"><a name="Overworld Ores-Nickel"></a>Nickel</h2>
+ <img src="/mainSpace/files/image009.jpg" alt="image009.jpg" title="image009.jpg" /><br />
+Nickel Ore is an ore of Nickel. It spawns in the Gold range, below Mountains or hills. It was added to provide a more direct means of acquiring Nickel for use in early and mid-game machinery, before a Grinder is an easy option.<br />
+Nickel Ore can be mined with an Iron Pickaxe or better.<br />
+Nickel Ore will likely only be found in 1 out of every 10 chunks of the correct biomes, but will spawn in veins of roughly 32 ore.<br />
+<br />
+<strong>Nickel can spawn between layers 10 to 32 in the following biomes:</strong><br />
+<ul><li><span style="line-height: 1.5;">Extreme Hills</span></li><li><span style="line-height: 1.5;">Extreme Hills Edge</span></li><li><span style="line-height: 1.5;">Alps</span></li><li><span style="line-height: 1.5;">Flying Mountains</span></li><li><span style="line-height: 1.5;">Rock Mountains</span></li><li><span style="line-height: 1.5;">Snow Mountains</span></li><li><span style="line-height: 1.5;">Rock Island</span></li><li><span style="line-height: 1.5;">Mountain Ridge</span></li><li><span style="line-height: 1.5;">Volcano Island</span></li><li><span style="line-height: 1.5;">Dark Forest</span></li><li><span style="line-height: 1.5;">Mountainous Desert</span></li><li><span style="line-height: 1.5;">Volcano</span></li></ul><br />
+<br />
+<h2 id="toc9"><a name="Overworld Ores-Sphalerite"></a>Sphalerite</h2>
+ <br />
+While natively a Nether Ore, Sphalerite can spawn in very small amounts at the bottom of lava lakes in the Overworld, to allow for Brass (ZnCu<span style="font-size: 80%; vertical-align: sub;">3</span>) production without access to the Nether. It cannot be smelted, but its Dust can be Electrolyzed to produce Zinc and Sulfur. The Sphalerite Ore found in the Overworld is identical to the Sphalerite Ore found in the Nether, but with slightly different textures rendered. <span style="line-height: 1.5;">It can also be found in small amounts in Red Granite.</span><br />
+Sphalerite Ore, when not silktouched, is the primary early-game source of Zinc Dust, for use in making Brass.<br />
+Sphalerite Ore must be Silktouched to acquire the block; when otherwise broken it will drop 2 Sphalerite Dust, 0-1 Zinc Dust, and 0-1 Yellow Garnets.<br />
+Yellow Garnets currently have no use on their own, however their Dust can be Centrifuged and Electrolyzed to produce a variety of other materials, most notably Uvarovite Dust, which can be Electrolyzed into Chrome.<br />
+Yellow Garnet Blocks can be used in a Beacon base.<br />
+Sphalerite Ore can be mined with a Stone Pickaxe or better.<br />
+Sphalerite in the Overworld can only be found extremely deep underground, below level 10, and will only spawn as single ore blocks, but some will likely be found in every chunk.<br />
+<br />
+<h2 id="toc10"><a name="Overworld Ores-Granite"></a>Granite</h2>
+ <img src="/mainSpace/files/image001.jpg" alt="image001.jpg" title="image001.jpg" /><br />
+Version 4.04b adds two new materials to world generation: <strong>Red Granite</strong> and <strong>Black Granite</strong>. Both of them can generate at any height in any biome, and will generate in fields/clumps, akin to Railcraft's Abyssal or Quarried Stone. Granite has 3x the Hardness of Stone, TNT-proof Blast Resistance, and requires a Diamond-equivalent Pickaxe to mine. On its own, it doesn't do much, however veins of it have a chance to contain larger than normal amounts of certain valuable materials. Black Granite can contain <strong>Tungstate, Sheldonite,</strong> and <strong>Iridium</strong> Ores. Red Granite can contain <strong>Tetrahedrite, Sphalerite,</strong> and <strong>Cinnabar</strong> Ores.<br />
+Black and Red Granite can be found at any height below level 120. They are rarely generated (only a few fields of either across a several hundred chunk area), but their fields are so large (50 to 400 blocks) that finding Granite is relatively common.<br />
+<br />
+<h1 id="toc11"><a name="Nether Ores"></a><span style="font-size: 150%;">Nether Ores</span></h1>
+ All Nether Ores must be Silktouched or they will drop Dusts. All three Nether Ores contain large amounts of Sulfur.<br />
+Nether Ores have 5 options for Vein sizes, Tiny, Small, Medium, Large, and Huge. The different vein sizes that spawn can be toggled in the WorldGen section of DynamicConfig.cfg<br />
+All 3 Nether Ores will spawn in fairly sizable quantities in every chunk, and in vein sizes between 4 and 32 ores, but each will only spawn at a specific height range.<br />
+<br />
+<h2 id="toc12"><a name="Nether Ores-Pyrite"></a>Pyrite</h2>
+ Iron from Hell, also known as &quot;Fool's Gold&quot; due its color that ressembles gold, Pyrite Ore is an ore of Iron and Sulfur. Pyrite Ore itself can be smelted into 1 Iron Ingot, or smelted in an Industrial Blast Furnace with a Calcium Carbonate cell to produce 2 Refined Iron Ingots. Pyrite Dust can be Electrolyzed to produce Iron and Sulfur Dusts. It has the most distinctive texture of all the nether ores, with its bright yellow shapes easily visible against the dull red of the nether. It was also the first GT ore to feature multiple, variable textures.<br />
+When not Silktouched, drops 2 Pyrite Dust.<br />
+Pyrite Ore can be mined with a Stone Pickaxe or better.<br />
+Pyrite Ore can only be found below level 64.<br />
+<br />
+<h2 id="toc13"><a name="Nether Ores-Cinnabar"></a>Cinnabar</h2>
+ The Ore of Mercury, only available in the upper levels of the Nether. Its deep red color causes it to blend in with the surrounding Netherrack, further reducing the odds of finding it. When processed in an Industrial Grinder, it yields small amounts of Redstone and Glowstone dust. Its Dust can be Electrolyzed to produce Sulfur and Mercury Cells.<br />
+When not Silktouched, drops 2 Cinnabar Dust, and 0-1 Redstone Dust<br />
+Cinnabar Ore can be mined with an Iron Pickaxe or better.<br />
+Cinnabar Ore can only be found above level 64.<br />
+<br />
+<h2 id="toc14"><a name="Nether Ores-Sphalerite"></a>Sphalerite</h2>
+ The main source of Zinc, and the most common of the Nether ores. Its dull orange shapes do not stand out as much as Pyrite, but do not blend like Cinnabar. Its Dust can be Electrolyzed to produce Zinc and Sulfur.<br />
+Sphalerite Ore, when not silktouched, is the primary early-game source of Zinc Dust, for use in making Brass.<br />
+When not Silktouched, drops 2 Sphalerite Dust, 0-1 Zinc Dust, and 0-1 Yellow Garnets.<br />
+Yellow Garnets currently have no use on their own, however their Dust can be Centrifuged and Electrolyzed to produce a variety of other materials, like uvarovite dust, which can be further Electrolyzed into chrome.<br />
+Yellow Garnet Blocks can be used in a Beacon base.<br />
+Sphalerite Ore can be mined with a Stone Pickaxe or better.<br />
+Sphalerite Ore can only be found between levels 32 and 96.<br />
+Due to its spawning in the Overworld as well as the Nether, its texture as a block (in inventory) has the stone background of an Overworld ore, despite it being predominantly mined in the Nether.<br />
+<br />
+<h1 id="toc15"><a name="End Ores"></a><span style="font-size: 150%;">End Ores</span></h1>
+ In the darkness of The End, some ores will spawn within the light rocks. Some may spawn in the main platform island, however most of the End ore is found in a series of Asteroids generated throughout the black skies. Bring some way of flying and a way to refuel, or a looooooot of cobble to build skybridges with.<br />
+<br />
+<h2 id="toc16"><a name="End Ores-Tungstate"></a>Tungstate</h2>
+ The first of the End ores, common black as the skies around. It can be smelted to produce 1 Tungsten Dust, which can either be canned to form a Wolframium Cell, or smelted in an Industrial Blast Furnace. When processed in an Industrial Grinder, it yields a small amount of Manganese Dust, a critical ingredient in making Stainless Steel.<br />
+Tungstate Ore can be found in small quantities in Black Granite formations in the Overworld, allowing for the acquisition of Manganese Dust for Stainless Steel, prior to travelling to the End.<br />
+Tungstate Ore can be mined with an Iron Pickaxe or better.<br />
+<br />
+<h2 id="toc17"><a name="End Ores-Olivine"></a>Olivine</h2>
+ Gems from the beyond, an alternative to Emeralds when making Data Storage Circuits. Its Dust can be Electrolyzed to produce Magnesium. When processed in an Industrial Grinder, it yields a small amount of Emerald Dust.<br />
+Olivine Ore must be Silktouched to acquire the block; when otherwise broken it will drop 1 Olivine.<br />
+Olivine Blocks can be used in a Beacon base.<br />
+Olivine Ore can be mined with a Diamond Pickaxe or equivalent.<br />
+<br />
+<h2 id="toc18"><a name="End Ores-Sodalite"></a>Sodalite</h2>
+ It looks like Lapis, it smells like Lapis, it works like Lapis, but it's found in the End. Sodalite Dust can be used as a form of Blue Dye, or it can be Electrolyzed to produce Sodium, Aluminium, Silicon, and Chlorite.<br />
+Sodalite Ore must be Silktouched to acquire the block; when otherwise broken, it drops 6 Sodalite Dust and 0-1 Aluminium Dust.<br />
+Sodalite Ore can be mined with an Iron Pickaxe or better.<br />
+<br />
+<h2 id="toc19"><a name="End Ores-Sheldonite"></a>Sheldonite</h2>
+ The most valuable of all the End ores, the ore of Platinum. Its faint yellow coloration further causes it to blend in with the End Stone it rests in. It can be Smelted into 1 Platinum Ingot. When processed in an Industrial Grinder, it yields Platinum and Nickel Dusts, and two Iridium Nuggets. It can be ground with a Mercury Cell, increasing its yield of Platinum Dust from 2 to 3.<br />
+Sheldonite Ore can also be found in small quantities inside Black Granite formations in the Overworld.<br />
+Sheldonite Ore can be mined with a Diamond Pickaxe or better.<br />
+Note: In the code and configuration files, Sheldonite Ore is referenced as &quot;Cooperiteore&quot; or &quot;oreEndCooperite&quot;. The names may be a pun based on the name of Dr. Sheldon Cooper, from the television show &quot;The Big Bang Theory.&quot;<br />
+<br />
+<h1 id="toc20"><a name="Ore Core Textures"></a><span style="font-size: 27px;">Ore Core Textures</span></h1>
+ All GregTech ores have a unique feature that changes their textures. Most ores has &quot;random-textures&quot; feature, showing different textures on sides (and hiding some if you have &quot;hidden ores&quot; on) . When an ore lacks adjacent stone-like blocks, it shows something called a &quot;Core Texture&quot;making it very easy to notice. Unfortunately, Greg isn't the best at making textures so the <em>Beautiful and Majestic</em> SirusKing (<em><span style="line-height: 1.5;">Note from SpwnX : This was written by himself) </span></em><span style="line-height: 1.5;">has made new textures for it. Example below.</span><br />
+<br />
+<br />
+Before Modification:<br />
+<img src="http://i.imgur.com/LU2WuLJ.png" alt="external image LU2WuLJ.png" title="external image LU2WuLJ.png" style="height: 376px; width: 678px;" /><br />
+After Modification:<br />
+<img src="http://i.imgur.com/X6oYKIV.png" alt="external image X6oYKIV.png" title="external image X6oYKIV.png" style="height: 378px; width: 681px;" /><br />
+Much more Smooth, eh?<br />
+Download Instructions:<br />
+Download then Extract <a class="wiki_link_ext" href="http://www.mediafire.com/?nkw7ttnuc99rmo4" rel="nofollow" target="_blank">this!</a><br />
+Copy the folder &quot;tile.Ore_Default&quot;<br />
+Go into the GregTech Mod.zip inside your mods folder<br />
+mods &gt; GregTech &gt; Textures &gt; Blocks<br />
+Remove the &quot;tile.Ore_Default&quot; inside that folder<br />
+Paste my modified one inside it<br />
+Run game<br />
+?????<br />
+PROFIT!!!!!1!!!
+    </div>
+  </body>
+</html>
